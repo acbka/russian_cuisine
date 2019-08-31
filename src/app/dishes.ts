@@ -4,7 +4,7 @@ import { Categories } from "./categories";
 export const Dishes: Dish[] =
     [
         {
-            id: 11,
+            id: 12,
             category: Categories.Soup,
             name: "peas",
             ingrideinets: ["peas", "meat", "potato"],
