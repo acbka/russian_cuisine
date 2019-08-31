@@ -13,6 +13,15 @@ export const Dishes: Dish[] =
             calories: 163
         },
         {
+         id: 1,
+         category: Categories.Soup,
+         name: "peas",
+         ingrideinets: ["peas", "meat", "potato"],
+         pict: "http://www.site.com/picts/pict1.png",
+         dairyFree: true,
+         calories: 163
+     },
+        {
             id: 2,
             category: Categories.Main,
             name: "BBQ",
