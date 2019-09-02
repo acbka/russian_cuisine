@@ -1,4 +1,7 @@
 <div class="container">
-<p [ngStyle]="{'color': colors.get(dish.category)}" *ngFor="let dish of dishes">{{dish.name}}</p>
+   
+<div [ngStyle]="{'color': colors.get(dish.category)}" *ngFor="let dish of dishes">
+   <img src="{{dish.pict}}" alt="">
+   {{dish.name}}</div>
 <p></p>
 </div>
