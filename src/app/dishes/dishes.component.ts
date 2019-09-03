@@ -12,8 +12,8 @@ import { Categories } from '../categories';
 })
 export class DishesComponent implements OnInit {
    dishes: Dish [] = Dishes;
-  colors : Map<Categories, string> = Categoriescolors;
-  constructor() { }
+   colors : Map<Categories, string> = Categoriescolors;
+   constructor() { }
 
   ngOnInit() {
      console.log(Categoriescolors)

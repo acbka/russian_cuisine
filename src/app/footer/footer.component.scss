@@ -1,0 +1,20 @@
+.footer{
+   background: linear-gradient(rgba(220, 220, 220, 0.3), rgba(220, 220, 220, 0.3)), url(../../assets/img/bg.jpg) no-repeat;
+   background-size: cover;
+   h2{
+      color: #fff;
+      font-size: 3rem;
+      font-weight: bold;
+   }
+}
+.footer-left{
+   padding: 70px 0 0 50px;
+}
+.footer-middle{
+   text-align: center;
+}
+.footer-right{
+   color: #fff;
+   padding-top: 30px;
+   text-align: center;
+}

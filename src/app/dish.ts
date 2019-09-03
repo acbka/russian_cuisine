@@ -5,7 +5,7 @@ export class Dish {
     id: number;
     category: Categories;
     name: string;
-    ingrideinets: string[];
+    ingredients: string[];
     dairyFree: boolean;
     calories: number;
     pict: string

@@ -1,7 +1,27 @@
 <div class="container">
+   <div class="row">
+      <div class="card col-lg-4" *ngFor="let dish of dishes">
+         <img src="{{dish.pict}}" class="card-img-top" alt="...">
+         <div class="card-body">
+            <h5 class="card-title">{{dish.name}}</h5>
+            <p class="card-text">Ingredients</p>
+         </div>
+         <ul class="list-group list-group-flush">
+            <li class="list-group-item" >text</li>
+         </ul>
+         <div class="card-body">
+            <button type="button" class="btn btn-success">Add to order</button>
+         </div>
+      </div>
+
+        <!--
+      <div class="col-lg-4" [ngStyle]="{'color': colors.get(dish.category)}" *ngFor="let dish of dishes">
+         <div>
+            <img class="image" src="{{dish.pict}}" alt="">
+         </div>           
+         {{dish.name}}
+      </div>
+-->
+
+   </div>
    
-<div [ngStyle]="{'color': colors.get(dish.category)}" *ngFor="let dish of dishes">
-   <img src="{{dish.pict}}" alt="">
-   {{dish.name}}</div>
-<p></p>
-</div>
