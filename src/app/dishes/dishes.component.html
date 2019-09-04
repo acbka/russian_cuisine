@@ -1,14 +1,13 @@
 <div class="container">
    <div class="row">
-      <div class="card col-lg-4" *ngFor="let dish of dishes">
+      <div class="card col-lg-4 dishes" *ngFor="let dish of dishes">
          <img src="{{dish.pict}}" class="card-img-top" alt="...">
+         <span class="dairy" *ngIf="dish.dairyFree == true"><img src="../../assets/img/dairy.png"  alt="dairy free" data-title="dairy free"> </span>
          <div class="card-body">
             <h5 class="card-title">{{dish.name}}</h5>
-            <p class="card-text">Ingredients</p>
+            <p class="card-text">Ingredients:</p>
+            <p *ngFor="let x of dish.ingredients">{{x}}</p>
          </div>
-         <ul class="list-group list-group-flush">
-            <li class="list-group-item" >text</li>
-         </ul>
          <div class="card-body">
             <button type="button" class="btn btn-success">Add to order</button>
          </div>
@@ -21,7 +20,7 @@
          </div>           
          {{dish.name}}
       </div>
--->
+      -->
 
    </div>
    

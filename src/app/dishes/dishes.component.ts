@@ -11,12 +11,15 @@ import { Categories } from '../categories';
   styleUrls: ['./dishes.component.scss']
 })
 export class DishesComponent implements OnInit {
-   dishes: Dish [] = Dishes;
+   dishes : Dish [] = Dishes;
    colors : Map<Categories, string> = Categoriescolors;
+
+
+
+
    constructor() { }
 
   ngOnInit() {
-     console.log(Categoriescolors)
   }
 
 }

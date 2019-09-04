@@ -1,6 +1,29 @@
+.container{
+   padding-top: 20px;
+}
 .card{
    border: none;
 }
 .btn{
    border-radius: 2rem;
 }
+.dishes{
+   position: relative;
+}
+.dairy{
+   position: absolute;
+   background: #fff;
+   padding: 10px;
+   border-radius: 50%;
+}
+span:hover:after {
+   content: "attr(data-title)";
+  position: absolute;
+
+   background-color: red;
+   color: #3aaeda;
+   padding: 5px;
+   text-align: center;
+   -moz-box-shadow: 0 1px 1px rgba(0,0,0,.16);
+   -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.16);
+   box-shadow: 0 1px 1px rgba(0,0,0,.16);font-size: 12px;}

@@ -289,7 +289,7 @@ export const Dishes: Dish[] =
          name: "Caesar Salad",
          ingredients: ["romaine lettuce", "croutons", "parmesan cheese", "chicken", "tomato", "dijon mustard"],
          pict: "./assets/img/gallery/caesarSalad.jpg",
-         dairyFree: true,
+         dairyFree: false,
          calories: 221
       },
       {
@@ -298,7 +298,7 @@ export const Dishes: Dish[] =
          name: "Greek Salad",
          ingredients: ["tomato", "cucumber", "feta",  "onion", "olives"],
          pict: "./assets/img/gallery/greekSalad.jpg",
-         dairyFree: true,
+         dairyFree: false,
          calories: 87
       },
       {
