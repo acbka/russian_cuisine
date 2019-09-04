@@ -1,0 +1,6 @@
+<div *ngFor="let cat of numCategories">
+   <h2>{{categories[cat]}}</h2>
+   <div *ngFor="let top of getTop3inCategory(cat)">
+      {{top.name}}
+   </div>
+</div>

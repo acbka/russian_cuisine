@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light px-md-4 bg-white border-bottom shadow-sm">
-   <a class="navbar-brand" routerLink="/home"><img src="../../assets/img/bear.png" alt=""> Russian Granny</a>
+   <a class="navbar-brand" routerLink="/"><img src="../../assets/img/bear.png" alt=""> Russian Granny</a>
    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
    </button>
@@ -7,7 +7,10 @@
    <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-md-auto">
          <li class="nav-item active">
-         <a class="nav-link" routerLink="/home">Home<span class="sr-only">(current)</span></a>
+         <a class="nav-link" routerLink="/">Home<span class="sr-only">(current)</span></a>
+         </li>
+         <li class="nav-item active">
+            <a class="nav-link" routerLink="/popular">Popular<span class="sr-only">(current)</span></a>
          </li>
 
          <li class="nav-item dropdown">
@@ -15,11 +18,11 @@
             Dishes
          </a>
          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item"routerLink="/soup">Soup</a>
-            <a class="dropdown-item" href="#">Main</a>
-            <a class="dropdown-item" href="#">Garnish</a>
-            <a class="dropdown-item" href="#">Salad</a>
-            <a class="dropdown-item" href="#">Dessert</a>
+            <a class="dropdown-item" routerLink="dishes/1">Soup</a>
+            <a class="dropdown-item" routerLink="dishes/0">Main</a>
+            <a class="dropdown-item" routerLink="dishes/2">Garnish</a>
+            <a class="dropdown-item" routerLink="dishes/4">Salad</a>
+            <a class="dropdown-item" routerLink="dishes/3">Dessert</a>
          </div>
          </li>
          <li class="nav-item">

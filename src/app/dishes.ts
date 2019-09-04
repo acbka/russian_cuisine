@@ -11,7 +11,8 @@ export const Dishes: Dish[] =
          ingredients: ["fermented cabbage", "pork", "potato"],
          pict: "./assets/img/gallery/shchi.jpg",
          dairyFree: true,
-         calories: 477
+         calories: 477,
+         selected: false
       },
       {
          id: 102,
@@ -20,7 +21,8 @@ export const Dishes: Dish[] =
          ingredients: ["beef", "cabbage", "potato","beetroot","carrot","tomato paste"],
          pict: "./assets/img/gallery/borscht.jpg",
          dairyFree: true,
-         calories: 122
+         calories: 122,
+         selected: false
       },
       {
          id: 103,
@@ -29,7 +31,8 @@ export const Dishes: Dish[] =
          ingredients: ["beef", "ham", "sausages", "onion", "pickled cucumbers", "olives"],
          pict: "./assets/img/gallery/solyanka.jpg",
          dairyFree: true,
-         calories: 233
+         calories: 233,
+         selected: false
       },
       {
          id: 104,
@@ -38,7 +41,8 @@ export const Dishes: Dish[] =
          ingredients: ["sausages", "cucumbers,", "potato", "dill", "sour cream"],
          pict: "./assets/img/gallery/okroshka.jpg",
          dairyFree: false,
-         calories: 417
+         calories: 417,
+         selected: false
       },
       {
          id: 105,
@@ -47,7 +51,8 @@ export const Dishes: Dish[] =
          ingredients: ["beef", "pickled cucumbers", "pearl barley"],
          pict: "./assets/img/gallery/rassolnik.jpg",
          dairyFree: true,
-         calories: 137
+         calories: 137,
+         selected: false
       },
       {
          id: 106,
@@ -56,7 +61,8 @@ export const Dishes: Dish[] =
          ingredients: ["beef", "sorrel leaves", "potato", "boiled eggs", "sour cream"],
          pict: "./assets/img/gallery/sorrelSoup.jpg",
          dairyFree: false,
-         calories: 107
+         calories: 107,
+         selected: false
       },
       {
          id: 107,
@@ -65,7 +71,8 @@ export const Dishes: Dish[] =
          ingredients: ["fish", "carrot", "potato", "onion"],
          pict: "./assets/img/gallery/ukha.jpg",
          dairyFree: true,
-         calories: 204
+         calories: 204,
+         selected: false
       },
       {
          id: 108,
@@ -74,7 +81,8 @@ export const Dishes: Dish[] =
          ingredients: ["minced meat", "potato", "vermicelli", "onion"],
          pict: "./assets/img/gallery/frikadellerSoup.jpg",
          dairyFree: true,
-         calories: 158
+         calories: 158,
+         selected: false
       },
       {
          id: 109,
@@ -83,7 +91,8 @@ export const Dishes: Dish[] =
          ingredients: ["beef", "rice", "cherry plum", "chopped walnuts"],
          pict: "./assets/img/gallery/kharcho.jpg",
          dairyFree: true,
-         calories: 148
+         calories: 148,
+         selected: false
       },
       {
          id: 110,
@@ -92,7 +101,8 @@ export const Dishes: Dish[] =
          ingredients: [ "smoked ham ribs", "peas", "potato"],
          pict: "./assets/img/gallery/peaSoup.jpg",
          dairyFree: true,
-         calories: 641
+         calories: 641,
+         selected: false
       },
       {
          id: 201,
@@ -101,7 +111,8 @@ export const Dishes: Dish[] =
          ingredients: ["beef", "sour cream", "onion"],
          pict: "./assets/img/gallery/beefStroganoff.jpg",
          dairyFree: false,
-         calories: 147
+         calories: 147,
+         selected: false
       },
       {
          id: 202,
@@ -110,7 +121,8 @@ export const Dishes: Dish[] =
          ingredients: ["chicken", "butter", "dill"],
          pict: "./assets/img/gallery/chickenKiev.jpg",
          dairyFree: false,
-         calories: 290
+         calories: 290,
+         selected: false
       },
       {
          id: 203,
@@ -119,7 +131,8 @@ export const Dishes: Dish[] =
          ingredients: ["chicken", "butter"],
          pict: "./assets/img/gallery/pozharskyCutlet.jpg",
          dairyFree: false,
-         calories: 190
+         calories: 190,
+         selected: false
       },
       {
          id: 204,
@@ -128,7 +141,8 @@ export const Dishes: Dish[] =
          ingredients: ["veal", "mushrooms", "onion", "cheese", "mornay sauce"],
          pict: "./assets/img/gallery/vealOrloff.jpg",
          dairyFree: false,
-         calories: 246
+         calories: 246,
+         selected: false
       },
       {
          id: 205,
@@ -137,7 +151,8 @@ export const Dishes: Dish[] =
          ingredients: ["beef", "cabbage", "rice", "tomato paste"],
          pict: "./assets/img/gallery/cabbageRolls.jpg",
          dairyFree: true,
-         calories: 108
+         calories: 108,
+         selected: false
       },
       {
          id: 206,
@@ -146,7 +161,8 @@ export const Dishes: Dish[] =
          ingredients: ["pork", "beef", "chicken", "meat broth"],
          pict: "./assets/img/gallery/aspic.jpg",
          dairyFree: true,
-         calories: 350
+         calories: 350,
+         selected: false
       },
       {
          id: 207,
@@ -155,7 +171,8 @@ export const Dishes: Dish[] =
          ingredients: ["minced pork", "minced beef", "onion"],
          pict: "./assets/img/gallery/cutlet.jpg",
          dairyFree: true,
-         calories: 222
+         calories: 222,
+         selected: false
       },
       {
          id: 208,
@@ -164,7 +181,8 @@ export const Dishes: Dish[] =
          ingredients: ["сhicken"],
          pict: "./assets/img/gallery/chickenTabaka.jpg",
          dairyFree: true,
-         calories: 233
+         calories: 233,
+         selected: false
       },
       {
          id: 209,
@@ -173,7 +191,8 @@ export const Dishes: Dish[] =
          ingredients: ["fish fillet", " carrots", "onion", "tomato paste"],
          pict: "./assets/img/gallery/greekStyleFish.jpg",
          dairyFree: true,
-         calories: 128
+         calories: 128,
+         selected: false
       },
       {
          id: 210,
@@ -182,7 +201,8 @@ export const Dishes: Dish[] =
          ingredients: ["veal", "eggs"],
          pict: "./assets/img/gallery/vealMilanese.jpg",
          dairyFree: true,
-         calories: 251
+         calories: 251,
+         selected: false
       },
       {
          id: 211,
@@ -191,7 +211,8 @@ export const Dishes: Dish[] =
          ingredients: ["pike", "eggs", "onion"],
          pict: "./assets/img/gallery/gefilteFish.jpg",
          dairyFree: true,
-         calories: 113
+         calories: 113,
+         selected: false
       },
       {
          id: 301,
@@ -200,7 +221,8 @@ export const Dishes: Dish[] =
          ingredients: ["potato", "butter", "milk"],
          pict: "./assets/img/gallery/mashedPotato.jpg",
          dairyFree: false,
-         calories: 88
+         calories: 88,
+         selected: false
       },
       {
          id: 302,
@@ -209,7 +231,8 @@ export const Dishes: Dish[] =
          ingredients: ["rice"],
          pict: "./assets/img/gallery/rice.jpg",
          dairyFree: true,
-         calories: 130
+         calories: 130,
+         selected: false
       },
       {
          id: 303,
@@ -218,7 +241,8 @@ export const Dishes: Dish[] =
          ingredients: ["buckwheat"],
          pict: "./assets/img/gallery/buckwheatPorridge.jpg",
          dairyFree: true,
-         calories: 132
+         calories: 132,
+         selected: false
       },
       {
          id: 304,
@@ -227,7 +251,8 @@ export const Dishes: Dish[] =
          ingredients: ["pasta"],
          pict: "./assets/img/gallery/macaroni.jpg",
          dairyFree: true,
-         calories: 371
+         calories: 371,
+         selected: false
       },
       {
          id: 305,
@@ -236,7 +261,8 @@ export const Dishes: Dish[] =
          ingredients: ["cabbage", "carrot", "onion"],
          pict: "./assets/img/gallery/braisedCabbage.jpg",
          dairyFree: true,
-         calories: 47
+         calories: 47,
+         selected: false
       },
       {
          id: 306,
@@ -245,7 +271,8 @@ export const Dishes: Dish[] =
          ingredients: ["durum wheat semolina", "carrot", "capsicum", "zucchini"],
          pict: "./assets/img/gallery/couscous.jpg",
          dairyFree: true,
-         calories: 112
+         calories: 112,
+         selected: false
       },
       {
          id: 401,
@@ -254,7 +281,8 @@ export const Dishes: Dish[] =
          ingredients: ["potato", "carrot", "beetroot", "fermented cabbage", "pickled cucumber", "onion", "peas"],
          pict: "./assets/img/gallery/vinegret.jpg",
          dairyFree: true,
-         calories: 131
+         calories: 131,
+         selected: false
       },
       {
          id: 402,
@@ -263,7 +291,8 @@ export const Dishes: Dish[] =
          ingredients: ["potato", "meat", "pickled cucumber", "onion", "peas", "eggs", "mayonnaise"],
          pict: "./assets/img/gallery/olivierSalad.jpg",
          dairyFree: true,
-         calories: 162
+         calories: 162,
+         selected: false
       },
       {
          id: 403,
@@ -272,7 +301,8 @@ export const Dishes: Dish[] =
          ingredients: ["canned fish", "potato", "carrot", "onion", "eggs", "mayonnaise"],
          pict: "./assets/img/gallery/mimosaSalad.jpg",
          dairyFree: true,
-         calories: 296
+         calories: 296,
+         selected: false
       },
       {
          id: 404,
@@ -281,7 +311,8 @@ export const Dishes: Dish[] =
          ingredients: ["pickled herring", "potato", "carrot", "beetroot", "carrot", "onion", "mayonnaise"],
          pict: "./assets/img/gallery/dressedHerring.jpg",
          dairyFree: true,
-         calories: 209
+         calories: 209,
+         selected: false
       },
       {
          id: 405,
@@ -290,7 +321,8 @@ export const Dishes: Dish[] =
          ingredients: ["romaine lettuce", "croutons", "parmesan cheese", "chicken", "tomato", "dijon mustard"],
          pict: "./assets/img/gallery/caesarSalad.jpg",
          dairyFree: false,
-         calories: 221
+         calories: 221,
+         selected: false
       },
       {
          id: 406,
@@ -299,7 +331,8 @@ export const Dishes: Dish[] =
          ingredients: ["tomato", "cucumber", "feta",  "onion", "olives"],
          pict: "./assets/img/gallery/greekSalad.jpg",
          dairyFree: false,
-         calories: 87
+         calories: 87,
+         selected: false
       },
       {
          id: 501,
@@ -308,7 +341,8 @@ export const Dishes: Dish[] =
          ingredients: ["milk", "flour", "sugar"],
          pict: "./assets/img/gallery/blini.jpg",
          dairyFree: false,
-         calories: 227
+         calories: 227,
+         selected: false
       },
       {
          id: 502,
@@ -317,7 +351,8 @@ export const Dishes: Dish[] =
          ingredients: ["kefir", "flour", "sugar"],
          pict: "./assets/img/gallery/oladyi.jpg",
          dairyFree: false,
-         calories: 206
+         calories: 206,
+         selected: false
       },
       {
          id: 503,
@@ -326,7 +361,8 @@ export const Dishes: Dish[] =
          ingredients: ["milk", "flour", "sugar", "seasonal fruits"],
          pict: "./assets/img/gallery/pirozhki.jpg",
          dairyFree: false,
-         calories: 225
+         calories: 225,
+         selected: false
       },
       {
          id: 504,
@@ -335,7 +371,8 @@ export const Dishes: Dish[] =
          ingredients: ["farmer cheese ", "flour", "eggs", "sugar"],
          pict: "./assets/img/gallery/syrniki.jpg",
          dairyFree: false,
-         calories: 274
+         calories: 274,
+         selected: false
       },
       {
          id: 505,
@@ -344,7 +381,8 @@ export const Dishes: Dish[] =
          ingredients: ["milk", "flour", "sugar", "cottage cheese", "raisins"],
          pict: "./assets/img/gallery/vatrushka.jpg",
          dairyFree: false,
-         calories: 331
+         calories: 331,
+         selected: false
       },
       {
          id: 506,
@@ -353,6 +391,7 @@ export const Dishes: Dish[] =
          ingredients: ["apples", "flour", "sugar", "eggs"],
          pict: "./assets/img/gallery/applePie.jpg",
          dairyFree: true,
-         calories: 237
+         calories: 237,
+         selected: false
       }
    ];

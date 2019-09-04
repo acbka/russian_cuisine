@@ -8,5 +8,6 @@ export class Dish {
     ingredients: string[];
     dairyFree: boolean;
     calories: number;
-    pict: string
+    pict: string;
+    selected: boolean;
 }

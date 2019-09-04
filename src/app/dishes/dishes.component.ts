@@ -3,6 +3,8 @@ import { Dishes } from '../dishes';
 import { Dish } from '../dish';
 import { Categoriescolors } from '../categoriescolors'
 import { Categories } from '../categories';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 
 @Component({
@@ -17,9 +19,14 @@ export class DishesComponent implements OnInit {
 
 
 
-   constructor() { }
+   constructor(
+      private route: ActivatedRoute,
+      private location: Location
+   ) { }
 
   ngOnInit() {
+   var category :number = +this.route.snapshot.paramMap.get('category');
+   this.dishes = Dishes.filter(dish => dish.category == category);
   }
 
 }
