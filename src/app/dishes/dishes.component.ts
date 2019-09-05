@@ -25,8 +25,17 @@ export class DishesComponent implements OnInit {
    ) { }
 
   ngOnInit() {
-   var category :number = +this.route.snapshot.paramMap.get('category');
-   this.dishes = Dishes.filter(dish => dish.category == category);
+    // подписаться на уведомления при изменении параметров в адресной строке
+    // params - это новый массив параметров (идущих после /dishes/)
+    this.route.params.subscribe(params => {
+      // у нас в параметрах только один - назвается он category
+      // + перед выражением преобразует string в number
+      const category = +params.category;
+
+      // фильтруем массив, передав  в него полученную категрию
+      this.dishes = Dishes.filter(dish => dish.category == category);
+    });
   }
+  
 
 }

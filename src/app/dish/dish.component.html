@@ -1,0 +1,12 @@
+<div class="col-lg-4 card">
+   <img src="{{dish.pict}}" class="card-img-top" alt="...">
+   <span class="dairy" *ngIf="dish.dairyFree == true"><img src="../../assets/img/dairy.png"  alt="dairy free" data-title="dairy free"> </span>
+   <div class="card-body">
+      <h5 class="card-title">{{dish.name}}</h5>
+      <p class="card-text">Ingredients:</p>
+      <p class="ingridient" *ngFor="let x of dish.ingredients">{{x}}</p>
+   </div>
+   <div class="card-bottom">
+      <button type="button" class="btn btn-success">Add to order</button>
+   </div>
+</div> 
