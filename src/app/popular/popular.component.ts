@@ -11,6 +11,8 @@ import { Dishes } from '../dishes';
 export class PopularComponent implements OnInit {
    categories = Categories;
    numCategories : number [] = [];
+   showIngredients: string = "none";
+   
    constructor() { }
 
    getTop3inCategory(num: number) : Dish[]{

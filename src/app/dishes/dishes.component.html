@@ -2,6 +2,7 @@
    <div class="row">
          <app-dish *ngFor="let dish of dishes" 
          [dish] = "dish"
+         [ingredients]="showIngredients"><!--здесь!!-->
          ></app-dish> 
    </div>
 </div>

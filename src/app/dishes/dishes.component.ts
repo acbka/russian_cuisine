@@ -16,7 +16,8 @@ export class DishesComponent implements OnInit {
    dishes : Dish [] = Dishes;
    colors : Map<Categories, string> = Categoriescolors;
 
-
+  ///// добавить
+  showIngredients: string = "block";
 
 
    constructor(

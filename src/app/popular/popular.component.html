@@ -4,6 +4,7 @@
       <div class="row">
          <app-dish *ngFor="let top of getTop3inCategory(cat)" 
          [dish] = "top"
+         [ingredients]="showIngredients"><!--здесь!!-->
          ></app-dish>        
       </div>
    </div>
