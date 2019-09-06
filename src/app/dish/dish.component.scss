@@ -1,14 +1,5 @@
-.container{
-   padding-top: 20px;
-}
 .card{
    border: none;
-}
-.btn{
-   border-radius: 2rem;
-}
-.dishes{
-   position: relative;   
 }
 .dairy{
    position: absolute;
@@ -26,11 +17,16 @@ span:hover:after {
    padding: 5px 10px;
    text-align: center;
 }
+.card-text{
+   margin-bottom: 0;
+}
 .ingridient{
    margin-bottom: 0;
    font-size: 16px;
 }
-.card-bottom{
-   margin-bottom: 30px;
+.card-footer{
+   background: #fff;
+   border: none;
+   margin-bottom: 30px;  
    text-align: center;
 }

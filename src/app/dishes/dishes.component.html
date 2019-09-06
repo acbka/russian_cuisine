@@ -1,9 +1,9 @@
 <div class="container">
    <div class="row">
-         <app-dish *ngFor="let dish of dishes" 
-         [dish] = "dish"
-         [ingredients]="showIngredients"><!--здесь!!-->
-         ></app-dish> 
+      <app-dish class="col-lg-4" *ngFor="let dish of dishes" 
+      [dish] = "dish"
+      [ingredients]="showIngredients"><!--здесь!!-->
+      </app-dish>  
    </div>
 </div>
 <!--

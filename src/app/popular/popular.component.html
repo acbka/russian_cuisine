@@ -2,7 +2,7 @@
    <div *ngFor="let cat of numCategories">
       <h2>{{categories[cat]}}</h2>
       <div class="row">
-         <app-dish *ngFor="let top of getTop3inCategory(cat)" 
+         <app-dish class="col-lg-4" *ngFor="let top of getTop3inCategory(cat)" 
          [dish] = "top"
          [ingredients]="showIngredients"><!--здесь!!-->
          ></app-dish>        

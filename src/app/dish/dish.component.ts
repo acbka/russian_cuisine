@@ -12,7 +12,10 @@ import { Categories } from '../categories';
 export class DishComponent implements OnInit {
   
    @Input() dish;
-   @Input() ingredients: string = "display"; // <!--здесь!!-->
+   @Input() ingredients: string = "block"; 
+
+
+
   constructor() { }
 
   ngOnInit() {
