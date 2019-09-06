@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Dishes } from '../dishes';
 import { Dish } from '../dish';
-import { count } from 'console';
 
 @Component({
   selector: 'app-button',
@@ -22,7 +21,7 @@ export class ButtonComponent implements OnInit {
       this.dishes = Dishes.filter(dish => dish.selected == true);
       if (this.dishes.length == 2){
       }
-      
+
       console.log(this.dishes.length)
    }
 
