@@ -16,12 +16,8 @@ export class ButtonComponent implements OnInit {
    onClick(){
       this.dish.selected = !this.dish.selected;
       this.dishes = Dishes.filter(dish => dish.selected == true);
-      if (this.dishes.length == 2){
-         if(this.dish.selected =false){
-            this.disabled = false;
-         }
-      }
-      console.log(this.dishes.length)
+
+      console.log(this.dish)
    }
 
   constructor() { }
