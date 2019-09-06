@@ -11,7 +11,7 @@ export class ButtonComponent implements OnInit {
    dishes : Dish [] = Dishes;
 
    @Input() dish;
-   disabled;;
+   disabled;
 
    onClick(){
       this.dish.selected = !this.dish.selected;
