@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Dishes } from '../dishes';
 import { Dish } from '../dish';
-import { Categoriescolors } from '../categoriescolors'
+import { categoriesProperties } from '../categoriesProperties'
 import { Categories } from '../categories';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import { Properties } from '../properties';
 
 
 @Component({
@@ -14,11 +15,10 @@ import { Location } from '@angular/common';
 })
 export class DishesComponent implements OnInit {
    dishes : Dish [] = Dishes;
-   colors : Map<Categories, string> = Categoriescolors;
+   properties : Map<Categories, Properties> = categoriesProperties;
 
   ///// добавить
   showIngredients: string = "block";
-
 
    constructor(
       private route: ActivatedRoute,

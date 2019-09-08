@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Dishes } from '../dishes';
 import { Dish } from '../dish';
+import { OrderService } from '../order.service';
+import { Order } from '../order';
 
 @Component({
   selector: 'app-button',
@@ -9,25 +11,27 @@ import { Dish } from '../dish';
 })
 export class ButtonComponent implements OnInit {
    dishes : Dish [] = Dishes;
-   count : number = 0;
-
+   order : Order;
+   buttonText : string = "Add to order";
    @Input() dish;
    disabled;
    
 
    onClick(){
       this.dish.selected = !this.dish.selected;
-
-      this.dishes = Dishes.filter(dish => dish.selected == true);
-      if (this.dishes.length == 2){
+      this.buttonText = !this.dish.selected ? 'Add to order' : 'Delete';
+      if(this.dish.selected) {
+         this.orderService.addDish(this.dish);
+      } else {
+         this.orderService.removeDish(this.dish);
       }
-
-      console.log(this.dishes.length)
    }
 
-  constructor() { }
+  constructor( private orderService: OrderService) { }
 
   ngOnInit() {
+     
+   this.orderService.getOrder().subscribe(x=>this.order = x);
   }
 
 }
