@@ -1,5 +1,6 @@
-<div [ngClass]="{'shadow': (properties.get(dish.category).count <= order.getCount(dish.category) && !order.inOrder(dish))}">
-   <div class="card" [ngStyle]="{'border-color': dish.selected? properties.get(dish.category).color : '#fff'}" >
+
+   <div [ngClass]="{'box-shadow': (properties.get(dish.category).count <= order.getCount(dish.category) && !order.inOrder(dish))}"
+   class="card shadow" [ngStyle]="{'border-color': dish.selected? properties.get(dish.category).color : 'none'}" >
       <img class="card-img-top" src="{{dish.pict}}" alt="dish">
       <span class="dairy" *ngIf="dish.dairyFree == true"><img src="../../assets/img/dairy.png"  alt="dairy free" data-title="dairy free"></span>
       <div class="card-body">
@@ -13,7 +14,7 @@
          <app-button [dish]="dish"></app-button>
       </div>
    </div>
-</div>
+
 
 
 
