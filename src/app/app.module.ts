@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule }   from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DishesComponent } from './dishes/dishes.component';
@@ -12,6 +12,7 @@ import { DishComponent } from './dish/dish.component';
 import { ButtonComponent } from './button/button.component';
 import { OrderComponent } from './order/order.component';
 import { PopOrderComponent } from './pop-order/pop-order.component';
+import { SearchPipe } from './search.pipe';
 
 @NgModule({
   declarations: [
@@ -24,11 +25,13 @@ import { PopOrderComponent } from './pop-order/pop-order.component';
     DishComponent,
     ButtonComponent,
     OrderComponent,
-    PopOrderComponent
+    PopOrderComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

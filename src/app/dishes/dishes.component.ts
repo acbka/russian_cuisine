@@ -17,6 +17,8 @@ export class DishesComponent implements OnInit {
    dishes : Dish [] = Dishes;
    properties : Map<Categories, Properties> = categoriesProperties;
    cat: string;
+   searchStr : string = '';
+
   ///// добавить
   showIngredients: string = "block";
 
