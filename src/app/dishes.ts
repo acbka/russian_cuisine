@@ -12,6 +12,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/shchi.jpg",
          dairyFree: true,
          calories: 477,
+         top: false,
          selected: false
       },
       {
@@ -22,6 +23,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/borscht.jpg",
          dairyFree: true,
          calories: 122,
+         top: true,
          selected: false
       },
       {
@@ -32,6 +34,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/solyanka.jpg",
          dairyFree: true,
          calories: 233,
+         top: false,
          selected: false
       },
       {
@@ -42,6 +45,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/okroshka.jpg",
          dairyFree: false,
          calories: 417,
+         top: true,
          selected: false
       },
       {
@@ -52,6 +56,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/rassolnik.jpg",
          dairyFree: true,
          calories: 137,
+         top: false,
          selected: false
       },
       {
@@ -62,6 +67,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/sorrelSoup.jpg",
          dairyFree: false,
          calories: 107,
+         top: false,
          selected: false
       },
       {
@@ -72,6 +78,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/ukha.jpg",
          dairyFree: true,
          calories: 204,
+         top: false,
          selected: false
       },
       {
@@ -82,6 +89,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/frikadellerSoup.jpg",
          dairyFree: true,
          calories: 158,
+         top: false,
          selected: false
       },
       {
@@ -92,6 +100,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/kharcho.jpg",
          dairyFree: true,
          calories: 148,
+         top: true,
          selected: false
       },
       {
@@ -102,6 +111,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/peaSoup.jpg",
          dairyFree: true,
          calories: 641,
+         top: false,
          selected: false
       },
       {
@@ -112,6 +122,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/beefStroganoff.jpg",
          dairyFree: false,
          calories: 147,
+         top: false,
          selected: false
       },
       {
@@ -122,6 +133,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/chickenKiev.jpg",
          dairyFree: false,
          calories: 290,
+         top: false,
          selected: false
       },
       {
@@ -132,6 +144,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/pozharskyCutlet.jpg",
          dairyFree: false,
          calories: 190,
+         top: true,
          selected: false
       },
       {
@@ -142,6 +155,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/vealOrloff.jpg",
          dairyFree: false,
          calories: 246,
+         top: true,
          selected: false
       },
       {
@@ -152,6 +166,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/cabbageRolls.jpg",
          dairyFree: true,
          calories: 108,
+         top: false,
          selected: false
       },
       {
@@ -162,6 +177,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/aspic.jpg",
          dairyFree: true,
          calories: 350,
+         top: false,
          selected: false
       },
       {
@@ -172,6 +188,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/cutlet.jpg",
          dairyFree: true,
          calories: 222,
+         top: false,
          selected: false
       },
       {
@@ -182,6 +199,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/chickenTabaka.jpg",
          dairyFree: true,
          calories: 233,
+         top: false,
          selected: false
       },
       {
@@ -192,6 +210,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/greekStyleFish.jpg",
          dairyFree: true,
          calories: 128,
+         top: false,
          selected: false
       },
       {
@@ -202,6 +221,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/vealMilanese.jpg",
          dairyFree: true,
          calories: 251,
+         top: false,
          selected: false
       },
       {
@@ -212,6 +232,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/gefilteFish.jpg",
          dairyFree: true,
          calories: 113,
+         top: true,
          selected: false
       },
       {
@@ -222,6 +243,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/mashedPotato.jpg",
          dairyFree: false,
          calories: 88,
+         top: true,
          selected: false
       },
       {
@@ -232,6 +254,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/rice.jpg",
          dairyFree: true,
          calories: 130,
+         top: false,
          selected: false
       },
       {
@@ -242,6 +265,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/buckwheatPorridge.jpg",
          dairyFree: true,
          calories: 132,
+         top: false,
          selected: false
       },
       {
@@ -252,6 +276,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/macaroni.jpg",
          dairyFree: true,
          calories: 371,
+         top: false,
          selected: false
       },
       {
@@ -262,6 +287,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/braisedCabbage.jpg",
          dairyFree: true,
          calories: 47,
+         top: true,
          selected: false
       },
       {
@@ -272,6 +298,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/couscous.jpg",
          dairyFree: true,
          calories: 112,
+         top: true,
          selected: false
       },
       {
@@ -282,6 +309,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/vinegret.jpg",
          dairyFree: true,
          calories: 131,
+         top: false,
          selected: false
       },
       {
@@ -292,6 +320,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/olivierSalad.jpg",
          dairyFree: true,
          calories: 162,
+         top: true,
          selected: false
       },
       {
@@ -302,6 +331,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/mimosaSalad.jpg",
          dairyFree: true,
          calories: 296,
+         top: false,
          selected: false
       },
       {
@@ -312,6 +342,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/dressedHerring.jpg",
          dairyFree: true,
          calories: 209,
+         top: true,
          selected: false
       },
       {
@@ -322,6 +353,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/caesarSalad.jpg",
          dairyFree: false,
          calories: 221,
+         top: false,
          selected: false
       },
       {
@@ -332,6 +364,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/greekSalad.jpg",
          dairyFree: false,
          calories: 87,
+         top: true,
          selected: false
       },
       {
@@ -342,6 +375,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/blini.jpg",
          dairyFree: false,
          calories: 227,
+         top: false,
          selected: false
       },
       {
@@ -352,6 +386,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/oladyi.jpg",
          dairyFree: false,
          calories: 206,
+         top: true,
          selected: false
       },
       {
@@ -362,6 +397,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/pirozhki.jpg",
          dairyFree: false,
          calories: 225,
+         top: true,
          selected: false
       },
       {
@@ -372,6 +408,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/syrniki.jpg",
          dairyFree: false,
          calories: 274,
+         top: false,
          selected: false
       },
       {
@@ -382,6 +419,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/vatrushka.jpg",
          dairyFree: false,
          calories: 331,
+         top: false,
          selected: false
       },
       {
@@ -392,6 +430,7 @@ export const Dishes: Dish[] =
          pict: "./assets/img/gallery/applePie.jpg",
          dairyFree: true,
          calories: 237,
+         top: true,
          selected: false
       }
    ];

@@ -9,5 +9,6 @@ export class Dish {
     dairyFree: boolean;
     calories: number;
     pict: string;
+    top: boolean;
     selected: boolean;
 }

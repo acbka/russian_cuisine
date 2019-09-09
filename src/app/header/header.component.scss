@@ -1,6 +1,12 @@
 .navbar{
-   padding: 0;
+   padding: 0 20px;
 }
 .navbar-brand{
    color: #ED3833;
+}
+.show{
+   border: none;
+}
+button:focus{
+   outline:none
 }

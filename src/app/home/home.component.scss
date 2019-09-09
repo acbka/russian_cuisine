@@ -1,5 +1,7 @@
+$red: #ED3833;
+
 h1{
-   color: #ED3833;
+   color: $red;
 }
 .head{
    background: url(../../assets/img/header.jpg) no-repeat;
@@ -13,7 +15,7 @@ h1{
    width: 70%;
 }
 .header-text{
-   background-color: #ED3833;
+   background-color: $red;
    border-radius: 10px;
    color: #fff;
    display: inline-block;
@@ -49,7 +51,7 @@ h1{
    }
 }
 .btn-order{
-   background: #ED3833;
+   background: $red;
    border-radius: 30px;
    padding: 10px 30px;
    margin-bottom: 20px;
@@ -60,7 +62,12 @@ h1{
 .order-down{
    text-align: center;
 }
-.pict{
-   heigh: 35px;
-   width: 35px;
+.delivery{
+   background: #F5F5F5;
+   padding: 60px 0;
+   h2{
+      text-align: center;
+      padding-bottom: 40px;
+      color: $red;
+   }
 }
