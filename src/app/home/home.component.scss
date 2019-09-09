@@ -11,7 +11,7 @@ h1{
 .subtitle{
    display: block;
    font-size: 1.5rem;
-   margin: 40px 0 80px 0;  
+   margin: 40px 0 100px 0;  
    width: 70%;
 }
 .header-text{
@@ -20,6 +20,9 @@ h1{
    color: #fff;
    display: inline-block;
    padding: 20px 50px 10px;
+   p{
+      margin-bottom: 7px;
+   }
 }
 .rest{
    padding: 40px;
