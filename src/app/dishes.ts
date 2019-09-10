@@ -29,7 +29,7 @@ export const Dishes: Dish[] =
       {
          id: 103,
          category: Categories.Soup,
-         name: "Solyanka",
+         name: "solyanka",
          ingredients: ["beef", "ham", "sausages", "onion", "pickled cucumbers", "olives"],
          pict: "./assets/img/gallery/solyanka.jpg",
          dairyFree: true,
@@ -40,7 +40,7 @@ export const Dishes: Dish[] =
       {
          id: 104,
          category: Categories.Soup,
-         name: "Okroshka",
+         name: "okroshka",
          ingredients: ["sausages", "cucumbers,", "potato", "dill", "sour cream"],
          pict: "./assets/img/gallery/okroshka.jpg",
          dairyFree: false,
@@ -51,7 +51,7 @@ export const Dishes: Dish[] =
       {
          id: 105,
          category: Categories.Soup,
-         name: "Rassolnik",
+         name: "rassolnik",
          ingredients: ["beef", "pickled cucumbers", "pearl barley"],
          pict: "./assets/img/gallery/rassolnik.jpg",
          dairyFree: true,
@@ -62,7 +62,7 @@ export const Dishes: Dish[] =
       {
          id: 106,
          category: Categories.Soup,
-         name: "Sorrel Soup",
+         name: "sorrel Soup",
          ingredients: ["beef", "sorrel leaves", "potato", "boiled eggs", "sour cream"],
          pict: "./assets/img/gallery/sorrelSoup.jpg",
          dairyFree: false,
@@ -73,7 +73,7 @@ export const Dishes: Dish[] =
       {
          id: 107,
          category: Categories.Soup,
-         name: "Ukha",
+         name: "ukha",
          ingredients: ["fish", "carrot", "potato", "onion"],
          pict: "./assets/img/gallery/ukha.jpg",
          dairyFree: true,

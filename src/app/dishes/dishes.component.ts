@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Dishes } from '../dishes';
 import { Dish } from '../dish';
 import { categoriesProperties } from '../categoriesProperties'
@@ -17,7 +17,9 @@ export class DishesComponent implements OnInit {
    dishes : Dish [] = Dishes;
    properties : Map<Categories, Properties> = categoriesProperties;
    cat: string;
-   searchStr : string = '';
+   searchStr: string = "";
+
+   @Input() search;
 
   ///// добавить
   showIngredients: string = "block";

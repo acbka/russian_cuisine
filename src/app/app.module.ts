@@ -13,6 +13,7 @@ import { ButtonComponent } from './button/button.component';
 import { OrderComponent } from './order/order.component';
 import { PopOrderComponent } from './pop-order/pop-order.component';
 import { SearchPipe } from './search.pipe';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SearchPipe } from './search.pipe';
     ButtonComponent,
     OrderComponent,
     PopOrderComponent,
-    SearchPipe
+    SearchPipe,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

@@ -30,7 +30,7 @@ export class ButtonComponent implements OnInit {
   constructor( private orderService: OrderService) { }
 
   ngOnInit() {
-     
+   this.buttonText = !this.dish.selected ? 'Add to order' : 'Delete'; 
    this.orderService.getOrder().subscribe(x=>this.order = x);
   }
 
