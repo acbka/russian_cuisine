@@ -1,8 +1,9 @@
 <div class="container">
    <div class="row">
    <h1 class="col-lg-9">{{cat}}</h1>
-   <div class="col-lg-3">
-<app-search></app-search>
+   <div class="input-group col-lg-3">
+      <span class="image"><img src="../../assets/img/search.png" alt=""></span>
+      <input type="text" class="form-control" [(ngModel)]="searchStr">
    </div>
 </div>
    <div class="row">

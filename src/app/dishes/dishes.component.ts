@@ -6,7 +6,6 @@ import { Categories } from '../categories';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { Properties } from '../properties';
-import { SearchComponent} from '../search/search.component';
 
 
 
@@ -19,8 +18,9 @@ export class DishesComponent implements OnInit {
    dishes : Dish [] = Dishes;
    properties : Map<Categories, Properties> = categoriesProperties;
    cat: string;
-
-   @Input() searchStr;
+   searchStr : string = '';
+   
+   @Input() search;
 
   ///// добавить
   showIngredients: string = "block";
