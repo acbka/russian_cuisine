@@ -6,7 +6,7 @@ import { Categories } from '../categories';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { Properties } from '../properties';
-import { Search} from '../search';
+import { SearchComponent} from '../search/search.component';
 
 
 
