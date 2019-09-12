@@ -14,6 +14,7 @@ import { OrderComponent } from './order/order.component';
 import { PopOrderComponent } from './pop-order/pop-order.component';
 import { SearchPipe } from './search.pipe';
 import { SearchComponent } from './search/search.component';
+import { ReadyComponent } from './ready/ready.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SearchComponent } from './search/search.component';
     OrderComponent,
     PopOrderComponent,
     SearchPipe,
-    SearchComponent
+    SearchComponent,
+    ReadyComponent
   ],
   imports: [
     BrowserModule,

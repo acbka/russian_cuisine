@@ -16,7 +16,7 @@ export class PopularComponent implements OnInit {
    constructor() { }
 
    getTop3inCategory(num: number) : Dish[]{
-      return Dishes.filter(dish => dish.category == num).sort((a,b) => Math.random()-.5).slice(0,3);
+      return Dishes.filter(dish => dish.category == num&&dish.top);
    }
 
   ngOnInit() {

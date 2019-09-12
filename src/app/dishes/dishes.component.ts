@@ -6,6 +6,8 @@ import { Categories } from '../categories';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { Properties } from '../properties';
+import { Search} from '../search';
+
 
 
 @Component({
@@ -17,9 +19,8 @@ export class DishesComponent implements OnInit {
    dishes : Dish [] = Dishes;
    properties : Map<Categories, Properties> = categoriesProperties;
    cat: string;
-   searchStr: string = "";
 
-   @Input() search;
+   @Input() searchStr;
 
   ///// добавить
   showIngredients: string = "block";
@@ -36,7 +37,7 @@ export class DishesComponent implements OnInit {
       // у нас в параметрах только один - назвается он category
       // + перед выражением преобразует string в number
       const category = +params.category;
-      this.cat = params.category;
+      this.cat = Categories[params.category];
       // фильтруем массив, передав  в него полученную категрию
       this.dishes = Dishes.filter(dish => dish.category == category);
     });

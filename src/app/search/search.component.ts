@@ -8,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class SearchComponent implements OnInit {
 
    searchStr : string = '';
-  constructor() { }
+   constructor() { }
 
-  ngOnInit() {
-  }
+   ngOnInit() {
+   }
 
 }
