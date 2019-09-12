@@ -1,3 +1,3 @@
 ﻿
 export
-   enum Categories { Soup, Main,  Garnish, Salad , Dessert }
+   enum Categories { Soups, Mains, Sides, Salads , Desserts }

@@ -2,9 +2,18 @@
    padding-top: 20px;
 }
 .form-control{
+   border: none;
    height: 30px;
    padding: 0 15px;
+
 }
 .image{
-   padding-right: 10px;
+   background: none;
+   border: none;
+   padding: 0;
+   outline: none;
+}
+input:focus{
+   border: transparent;
+   outline: none;
 }

@@ -31,53 +31,53 @@ export class Order {
    }
    getCount(cat : Categories) : number {
       switch (cat) {
-         case Categories.Soup :
+         case Categories.Soups :
             return this.soup.length;
-         case Categories.Main :
+         case Categories.Mains :
             return this.main.length;
-         case Categories.Garnish :
+         case Categories.Sides :
             return this.garnish.length;
-         case Categories.Salad :
+         case Categories.Salads :
             return this.salad.length;
-         case Categories.Dessert :
+         case Categories.Desserts :
             return this.dessert.length;
       }
    }
   
    addDish(dish : Dish) : void {  
       switch (dish.category) {
-         case Categories.Soup :
+         case Categories.Soups :
             this.soup.push(dish);
             break;
-         case Categories.Main :
+         case Categories.Mains :
             this.main.push(dish);
             break;
-         case Categories.Garnish :
+         case Categories.Sides :
             this.garnish.push(dish);
             break;
-         case Categories.Salad :
+         case Categories.Salads :
             this.salad.push(dish);
             break;
-         case Categories.Dessert :
+         case Categories.Desserts :
             this.dessert.push(dish);
       }
    }
 
    removeDish(dish : Dish) : void {  
       switch (dish.category) {
-         case Categories.Soup :
+         case Categories.Soups :
             this.soup = this.soup.filter(x => x != dish);
             break;
-         case Categories.Main :
+         case Categories.Mains :
             this.main = this.main.filter(x => x != dish);
             break;
-         case Categories.Garnish :
+         case Categories.Sides :
             this.garnish = this.garnish.filter(x => x != dish);
             break;
-         case Categories.Salad :
+         case Categories.Salads :
             this.salad = this.salad.filter(x => x != dish);
             break;
-         case Categories.Dessert :
+         case Categories.Desserts :
             this.dessert = this.dessert.filter(x => x!= dish);
       }
    }
@@ -85,19 +85,19 @@ export class Order {
    inOrder(dish : Dish) : boolean {
       var count: number = 0;
       switch (dish.category) {
-         case Categories.Soup :
+         case Categories.Soups :
             count = this.soup.filter(x => x==dish).length;
             break;
-         case Categories.Main :
+         case Categories.Mains :
             count = this.main.filter(x => x==dish).length;
             break;
-         case Categories.Garnish :
+         case Categories.Sides :
             count = this.garnish.filter(x => x==dish).length;
             break;
-         case Categories.Salad :
+         case Categories.Salads :
             count = this.salad.filter(x => x==dish).length;
             break;
-         case Categories.Dessert :
+         case Categories.Desserts :
             count = this.dessert.filter(x => x==dish).length;
       }
       return count > 0 ? true : false;

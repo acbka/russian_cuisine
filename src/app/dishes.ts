@@ -6,7 +6,7 @@ export const Dishes: Dish[] =
    [
       {
          id: 101,
-         category: Categories.Soup,
+         category: Categories.Soups,
          name: "Shchi",
          ingredients: ["fermented cabbage", "pork", "potato"],
          pict: "./assets/img/gallery/shchi.jpg",
@@ -17,7 +17,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 102,
-         category: Categories.Soup,
+         category: Categories.Soups,
          name: "Borscht",
          ingredients: ["beef", "cabbage", "potato","beetroot","carrot","tomato paste"],
          pict: "./assets/img/gallery/borscht.jpg",
@@ -28,7 +28,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 103,
-         category: Categories.Soup,
+         category: Categories.Soups,
          name: "solyanka",
          ingredients: ["beef", "ham", "sausages", "onion", "pickled cucumbers", "olives"],
          pict: "./assets/img/gallery/solyanka.jpg",
@@ -39,7 +39,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 104,
-         category: Categories.Soup,
+         category: Categories.Soups,
          name: "okroshka",
          ingredients: ["sausages", "cucumbers,", "potato", "dill", "sour cream"],
          pict: "./assets/img/gallery/okroshka.jpg",
@@ -50,7 +50,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 105,
-         category: Categories.Soup,
+         category: Categories.Soups,
          name: "rassolnik",
          ingredients: ["beef", "pickled cucumbers", "pearl barley"],
          pict: "./assets/img/gallery/rassolnik.jpg",
@@ -61,7 +61,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 106,
-         category: Categories.Soup,
+         category: Categories.Soups,
          name: "sorrel Soup",
          ingredients: ["beef", "sorrel leaves", "potato", "boiled eggs", "sour cream"],
          pict: "./assets/img/gallery/sorrelSoup.jpg",
@@ -72,7 +72,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 107,
-         category: Categories.Soup,
+         category: Categories.Soups,
          name: "ukha",
          ingredients: ["fish", "carrot", "potato", "onion"],
          pict: "./assets/img/gallery/ukha.jpg",
@@ -83,7 +83,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 108,
-         category: Categories.Soup,
+         category: Categories.Soups,
          name: "Frikadeller Soup",
          ingredients: ["minced meat", "potato", "vermicelli", "onion"],
          pict: "./assets/img/gallery/frikadellerSoup.jpg",
@@ -94,7 +94,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 109,
-         category: Categories.Soup,
+         category: Categories.Soups,
          name: "Kharcho",
          ingredients: ["beef", "rice", "cherry plum", "chopped walnuts"],
          pict: "./assets/img/gallery/kharcho.jpg",
@@ -105,7 +105,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 110,
-         category: Categories.Soup,
+         category: Categories.Soups,
          name: "Pea Soup",
          ingredients: [ "smoked ham ribs", "peas", "potato"],
          pict: "./assets/img/gallery/peaSoup.jpg",
@@ -116,7 +116,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 201,
-         category: Categories.Main,
+         category: Categories.Mains,
          name: "Beef Stroganoff",
          ingredients: ["beef", "sour cream", "onion"],
          pict: "./assets/img/gallery/beefStroganoff.jpg",
@@ -127,7 +127,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 202,
-         category: Categories.Main,
+         category: Categories.Mains,
          name: "Chicken Kiev",
          ingredients: ["chicken", "butter", "dill"],
          pict: "./assets/img/gallery/chickenKiev.jpg",
@@ -138,7 +138,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 203,
-         category: Categories.Main,
+         category: Categories.Mains,
          name: "Pozharsky Cutlet",
          ingredients: ["chicken", "butter"],
          pict: "./assets/img/gallery/pozharskyCutlet.jpg",
@@ -149,7 +149,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 204,
-         category: Categories.Main,
+         category: Categories.Mains,
          name: "Veal Orloff",
          ingredients: ["veal", "mushrooms", "onion", "cheese", "mornay sauce"],
          pict: "./assets/img/gallery/vealOrloff.jpg",
@@ -160,7 +160,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 205,
-         category: Categories.Main,
+         category: Categories.Mains,
          name: "Cabbage Rolls",
          ingredients: ["beef", "cabbage", "rice", "tomato paste"],
          pict: "./assets/img/gallery/cabbageRolls.jpg",
@@ -171,7 +171,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 206,
-         category: Categories.Main,
+         category: Categories.Mains,
          name: "Aspic",
          ingredients: ["pork", "beef", "chicken", "meat broth"],
          pict: "./assets/img/gallery/aspic.jpg",
@@ -182,7 +182,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 207,
-         category: Categories.Main,
+         category: Categories.Mains,
          name: "Cutlet",
          ingredients: ["minced pork", "minced beef", "onion"],
          pict: "./assets/img/gallery/cutlet.jpg",
@@ -193,7 +193,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 208,
-         category: Categories.Main,
+         category: Categories.Mains,
          name: "Chicken Tabaka",
          ingredients: ["сhicken"],
          pict: "./assets/img/gallery/chickenTabaka.jpg",
@@ -204,7 +204,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 209,
-         category: Categories.Main,
+         category: Categories.Mains,
          name: "Greek-Style Fish",
          ingredients: ["fish fillet", " carrots", "onion", "tomato paste"],
          pict: "./assets/img/gallery/greekStyleFish.jpg",
@@ -215,7 +215,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 210,
-         category: Categories.Main,
+         category: Categories.Mains,
          name: "Veal Milanese",
          ingredients: ["veal", "eggs"],
          pict: "./assets/img/gallery/vealMilanese.jpg",
@@ -226,7 +226,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 211,
-         category: Categories.Main,
+         category: Categories.Mains,
          name: "Gefilte Fish",
          ingredients: ["pike", "eggs", "onion"],
          pict: "./assets/img/gallery/gefilteFish.jpg",
@@ -237,7 +237,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 301,
-         category: Categories.Garnish,
+         category: Categories.Sides,
          name: "Mashed Potato",
          ingredients: ["potato", "butter", "milk"],
          pict: "./assets/img/gallery/mashedPotato.jpg",
@@ -248,7 +248,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 302,
-         category: Categories.Garnish,
+         category: Categories.Sides,
          name: "Rice",
          ingredients: ["rice"],
          pict: "./assets/img/gallery/rice.jpg",
@@ -259,7 +259,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 303,
-         category: Categories.Garnish,
+         category: Categories.Sides,
          name: "Buckwheat Porridge",
          ingredients: ["buckwheat"],
          pict: "./assets/img/gallery/buckwheatPorridge.jpg",
@@ -270,7 +270,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 304,
-         category: Categories.Garnish,
+         category: Categories.Sides,
          name: "Macaroni",
          ingredients: ["pasta"],
          pict: "./assets/img/gallery/macaroni.jpg",
@@ -281,7 +281,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 305,
-         category: Categories.Garnish,
+         category: Categories.Sides,
          name: "Braised Cabbage",
          ingredients: ["cabbage", "carrot", "onion"],
          pict: "./assets/img/gallery/braisedCabbage.jpg",
@@ -292,7 +292,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 306,
-         category: Categories.Garnish,
+         category: Categories.Sides,
          name: "Couscous",
          ingredients: ["durum wheat semolina", "carrot", "capsicum", "zucchini"],
          pict: "./assets/img/gallery/couscous.jpg",
@@ -303,7 +303,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 401,
-         category: Categories.Salad,
+         category: Categories.Salads,
          name: "Vinegret",
          ingredients: ["potato", "carrot", "beetroot", "fermented cabbage", "pickled cucumber", "onion", "peas"],
          pict: "./assets/img/gallery/vinegret.jpg",
@@ -314,7 +314,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 402,
-         category: Categories.Salad,
+         category: Categories.Salads,
          name: "Olivier Salad",
          ingredients: ["potato", "meat", "pickled cucumber", "onion", "peas", "eggs", "mayonnaise"],
          pict: "./assets/img/gallery/olivierSalad.jpg",
@@ -325,7 +325,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 403,
-         category: Categories.Salad,
+         category: Categories.Salads,
          name: "Mimosa Salad",
          ingredients: ["canned fish", "potato", "carrot", "onion", "eggs", "mayonnaise"],
          pict: "./assets/img/gallery/mimosaSalad.jpg",
@@ -336,7 +336,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 404,
-         category: Categories.Salad,
+         category: Categories.Salads,
          name: "Dressed Herring",
          ingredients: ["pickled herring", "potato", "carrot", "beetroot", "carrot", "onion", "mayonnaise"],
          pict: "./assets/img/gallery/dressedHerring.jpg",
@@ -347,7 +347,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 405,
-         category: Categories.Salad,
+         category: Categories.Salads,
          name: "Caesar Salad",
          ingredients: ["romaine lettuce", "croutons", "parmesan cheese", "chicken", "tomato", "dijon mustard"],
          pict: "./assets/img/gallery/caesarSalad.jpg",
@@ -358,7 +358,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 406,
-         category: Categories.Salad,
+         category: Categories.Salads,
          name: "Greek Salad",
          ingredients: ["tomato", "cucumber", "feta",  "onion", "olives"],
          pict: "./assets/img/gallery/greekSalad.jpg",
@@ -369,7 +369,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 501,
-         category: Categories.Dessert,
+         category: Categories.Desserts,
          name: "Blini",
          ingredients: ["milk", "flour", "sugar"],
          pict: "./assets/img/gallery/blini.jpg",
@@ -380,7 +380,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 502,
-         category: Categories.Dessert,
+         category: Categories.Desserts,
          name: "Oladyi",
          ingredients: ["kefir", "flour", "sugar"],
          pict: "./assets/img/gallery/oladyi.jpg",
@@ -391,7 +391,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 503,
-         category: Categories.Dessert,
+         category: Categories.Desserts,
          name: "Pirozhki",
          ingredients: ["milk", "flour", "sugar", "seasonal fruits"],
          pict: "./assets/img/gallery/pirozhki.jpg",
@@ -402,7 +402,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 504,
-         category: Categories.Dessert,
+         category: Categories.Desserts,
          name: "Syrniki",
          ingredients: ["farmer cheese ", "flour", "eggs", "sugar"],
          pict: "./assets/img/gallery/syrniki.jpg",
@@ -413,7 +413,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 505,
-         category: Categories.Dessert,
+         category: Categories.Desserts,
          name: "Vatrushka",
          ingredients: ["milk", "flour", "sugar", "cottage cheese", "raisins"],
          pict: "./assets/img/gallery/vatrushka.jpg",
@@ -424,7 +424,7 @@ export const Dishes: Dish[] =
       },
       {
          id: 506,
-         category: Categories.Dessert,
+         category: Categories.Desserts,
          name: "Apple Pie",
          ingredients: ["apples", "flour", "sugar", "eggs"],
          pict: "./assets/img/gallery/applePie.jpg",

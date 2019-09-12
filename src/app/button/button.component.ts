@@ -12,14 +12,13 @@ import { Order } from '../order';
 export class ButtonComponent implements OnInit {
    dishes : Dish [] = Dishes;
    order : Order;
-   buttonText : string = "Add to order";
+   buttonText : string = "";
    @Input() dish;
-   disabled;
    
 
    onClick(){
       this.dish.selected = !this.dish.selected;
-      this.buttonText = !this.dish.selected ? 'Add to order' : 'Delete';
+      this.buttonText = !this.dish.selected ? 'Add to order' : 'Remove';
       if(this.dish.selected) {
          this.orderService.addDish(this.dish);
       } else {
@@ -30,7 +29,7 @@ export class ButtonComponent implements OnInit {
   constructor( private orderService: OrderService) { }
 
   ngOnInit() {
-   this.buttonText = !this.dish.selected ? 'Add to order' : 'Delete'; 
+   this.buttonText = !this.dish.selected ? 'Add to order' : 'Remove'; 
    this.orderService.getOrder().subscribe(x=>this.order = x);
   }
 
