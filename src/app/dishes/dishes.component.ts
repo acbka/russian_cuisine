@@ -8,7 +8,6 @@ import { Location } from '@angular/common';
 import { Properties } from '../properties';
 
 
-
 @Component({
   selector: 'app-dishes',
   templateUrl: './dishes.component.html',
