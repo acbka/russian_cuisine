@@ -7,27 +7,27 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { Properties } from '../properties';
 
-
 @Component({
   selector: 'app-dishes',
   templateUrl: './dishes.component.html',
   styleUrls: ['./dishes.component.scss']
 })
 export class DishesComponent implements OnInit {
+
    dishes : Dish [] = Dishes;
    properties : Map<Categories, Properties> = categoriesProperties;
    cat: string;
-   searchStr : string = '';
-   
-   @Input() search;
-
-  ///// добавить
-  showIngredients: string = "block";
+   searchText: string = '';
+   showIngredients: string = "block";
 
    constructor(
       private route: ActivatedRoute,
       private location: Location
    ) { }
+
+   searchDish($event) {
+      this.searchText = $event;
+   }
 
   ngOnInit() {
     // подписаться на уведомления при изменении параметров в адресной строке

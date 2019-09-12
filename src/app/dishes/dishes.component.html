@@ -1,13 +1,13 @@
 <div class="container">
    <div class="row">
    <h1 class="col-lg-9">{{cat}}</h1>
-   <div class="input-group col-lg-3">
-      <span class="image"><img src="../../assets/img/search.png" alt=""></span>
-      <input type="text" class="form-control" [(ngModel)]="searchStr">
+   <div class="col-lg-3">
+      <app-search (searchEvent)="searchDish($event)"></app-search>
    </div>
 </div>
    <div class="row">
-      <app-dish style="display: flex" class="col-lg-4 col-md-6" *ngFor="let dish of dishes | search:searchStr" 
+      <app-dish style="display: flex" class="col-lg-4 col-md-6" 
+      *ngFor="let dish of dishes | search:searchText" 
       [dish] = "dish"
       [ingredients]="showIngredients"><!--здесь!!-->
       </app-dish>  
