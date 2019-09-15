@@ -1,9 +1,22 @@
 <div class="container">
    <h1>Order</h1>
-  <div>
-      {{order.soup[0].name}}
-      {{order.soup[1].name}}
-  </div>
+   <div class="row">
+      <div class="col-lg-4">
+         <h4>Soup</h4>
+      </div>
+      <div class="col-lg-4" *ngIf="order.soup.length == properties.get(Categories.Soups).count">
+
+      </div>
+   </div>
 </div>
 
-
+<div class="col-lg-4" *ngIf="order.soup[0].name !=''";else empty>
+   <span><img src="{{order.soup[0].pict}}" alt=""></span>         
+   <p>{{order.soup[0].name}}</p>
+</div>
+<ng-template #empty>
+   <span>
+      <img src="../../assets/img/empty.png" alt="">
+   </span>        
+   else
+</ng-template> 
