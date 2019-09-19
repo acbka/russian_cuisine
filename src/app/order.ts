@@ -1,5 +1,6 @@
 ﻿import { Dish } from './dish';
 import { Categories } from './categories';
+import { categoriesProperties } from './categoriesProperties';
 
 export class Order {
     id: number;
@@ -44,6 +45,21 @@ export class Order {
       }
    }
   
+   getCategoryArray(category: Categories): Dish[]{
+      switch (category) {
+         case Categories.Soups :
+            return this.soup;
+         case Categories.Mains :
+            return this.main;
+         case Categories.Sides :
+            return this.garnish;
+         case Categories.Salads :
+            return this.salad;
+         case Categories.Desserts :
+            return this.dessert;
+      }
+   }
+
    addDish(dish : Dish) : void {  
       switch (dish.category) {
          case Categories.Soups :
@@ -103,5 +119,15 @@ export class Order {
       return count > 0 ? true : false;
    }
 
+   isComplete() : boolean{
+      let result: boolean = true;
+      for (let cat in Categories) {
+         if (!isNaN(Number(cat))) {
+            result = result && 
+            (this.getCategoryArray(+cat).length == categoriesProperties.get(+cat).count);
+         }
+      }
+      return result;
+   }
 
 }

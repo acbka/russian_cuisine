@@ -1,1 +1,10 @@
-<p>ready works!</p>
+<div class="container">
+   <div class="row set" *ngFor="let set of ready">
+      <div class="col-lg-2"  *ngFor="let x of set">      
+         <span><img class="pict" src="{{x.pict}}" alt=""></span>
+         {{x.name}}      
+        
+      </div>
+   </div>
+</div>
+<!--{{isDairyFree(set)}}-->

@@ -1,22 +1,22 @@
 <div class="container">
    <h1>Order</h1>
-   <div class="row">
-      <div class="col-lg-4">
-         <h4>Soup</h4>
+   <div *ngFor="let cat of numCategories">
+      <div class="row" >
+         <div class="col-lg-4">
+            {{category[cat]}}
+         </div>
+         <div class="col-lg-8" *ngFor="let dish of getDishesInCategory(cat)">
+            <div class="row">
+               <div class="col-lg-6">
+                  <img class="picture" src="{{dish.pict}}" alt="">
+               </div> 
+               <p>{{dish.name}}</p>
+            </div>
+         </div> 
       </div>
-      <div class="col-lg-4" *ngIf="order.soup.length == properties.get(Categories.Soups).count">
-
-      </div>
-   </div>
+   </div>  
+   <button  *ngIf="order.isComplete()">order</button>
 </div>
 
-<div class="col-lg-4" *ngIf="order.soup[0].name !=''";else empty>
-   <span><img src="{{order.soup[0].pict}}" alt=""></span>         
-   <p>{{order.soup[0].name}}</p>
-</div>
-<ng-template #empty>
-   <span>
-      <img src="../../assets/img/empty.png" alt="">
-   </span>        
-   else
-</ng-template> 
+
+ 
