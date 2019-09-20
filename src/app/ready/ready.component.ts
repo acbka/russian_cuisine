@@ -1,47 +1,51 @@
 import { Component, OnInit } from '@angular/core';
 import { Dish } from '../dish';
 import { Dishes } from '../dishes';
+import { ReadySet } from '../readyset';
+import { OrderService } from '../order.service';
+import { Order } from '../order';
+import { readySets } from '../readysets';
 
 @Component({
   selector: 'app-ready',
   templateUrl: './ready.component.html',
   styleUrls: ['./ready.component.scss']
 })
+
 export class ReadyComponent implements OnInit {
 
-   ready: Dish [][] = [
-      [
-         this.getDish(102), this.getDish(103), 
-         this.getDish(205), this.getDish(207),
-         this.getDish(302), this.getDish(303),
-         this.getDish(402), this.getDish(506)
-      ],
-      [
-         this.getDish(101), this.getDish(103), 
-         this.getDish(206), this.getDish(202),
-         this.getDish(302), this.getDish(305),
-         this.getDish(401), this.getDish(506)
-      ],
-      [
-         this.getDish(101), this.getDish(103), 
-         this.getDish(201), this.getDish(202),
-         this.getDish(302), this.getDish(305),
-         this.getDish(401), this.getDish(506)
-      ]
-   ]
-
-   getDish(id:number) : Dish {
-      let result: Dish = Dishes.filter( x=> x.id == id)[0];
-      return result;
-   }
+   order : Order;
+   ready = readySets;
 
    isDairyFree(set:Dish[]) : boolean {
       return set.every(x => x.dairyFree);
    }
 
-  constructor() { }
+   contains(set:Dish[], what) : boolean {
+      return set.filter(x => x.ingredients.filter(y => y.includes(what)).length !=0).length != 0; //BeefFree - false
+   }
+
+   setOrder(dishes : Dish[]) : void {
+      this.orderService .setOrder(dishes);
+   }
+
+  constructor(private orderService : OrderService) { }
 
   ngOnInit() {
+   this.orderService.getOrder().subscribe(x=>this.order = x);
   }
 
+  /*
+   iBeef(set:Dish[]) : boolean {
+      return this.contains(set, "beef");
+   }
+
+   isPork(set:Dish[]) : boolean {
+      return this.contains(set, "pork");   
+   }
+
+   isFish(set:Dish[]) : boolean {
+      return this.contains(set, "fish");
+   }
+*/
 }

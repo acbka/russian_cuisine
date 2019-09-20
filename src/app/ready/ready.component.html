@@ -1,10 +1,14 @@
 <div class="container">
    <div class="row set" *ngFor="let set of ready">
-      <div class="col-lg-2"  *ngFor="let x of set">      
-         <span><img class="pict" src="{{x.pict}}" alt=""></span>
-         {{x.name}}      
-        
+      {{set.name}},
+      beef: {{contains(set.dishes,"beef")}},
+      pork: {{contains(set.dishes,"pork")||contains(set.dishes,"ham")}}
+      <div class="col-lg-1"  *ngFor="let x of set.dishes">      
+            <span><img class="pict" src="{{x.pict}}" alt=""></span>
+            {{x.name}}              
       </div>
+      <button class="btn btn-warning"
+      (click)="setOrder(set.dishes)">add</button>
    </div>
 </div>
 <!--{{isDairyFree(set)}}-->

@@ -29,7 +29,7 @@ export const Dishes: Dish[] =
       {
          id: 103,
          category: Categories.Soups,
-         name: "solyanka",
+         name: "Solyanka",
          ingredients: ["beef", "ham", "sausages", "onion", "pickled cucumbers", "olives"],
          pict: "./assets/img/gallery/solyanka.jpg",
          dairyFree: true,
@@ -40,7 +40,7 @@ export const Dishes: Dish[] =
       {
          id: 104,
          category: Categories.Soups,
-         name: "okroshka",
+         name: "Okroshka",
          ingredients: ["sausages", "cucumbers,", "potato", "dill", "sour cream"],
          pict: "./assets/img/gallery/okroshka.jpg",
          dairyFree: false,
@@ -51,7 +51,7 @@ export const Dishes: Dish[] =
       {
          id: 105,
          category: Categories.Soups,
-         name: "rassolnik",
+         name: "Rassolnik",
          ingredients: ["beef", "pickled cucumbers", "pearl barley"],
          pict: "./assets/img/gallery/rassolnik.jpg",
          dairyFree: true,
@@ -62,7 +62,7 @@ export const Dishes: Dish[] =
       {
          id: 106,
          category: Categories.Soups,
-         name: "sorrel Soup",
+         name: "Sorrel Soup",
          ingredients: ["beef", "sorrel leaves", "potato", "boiled eggs", "sour cream"],
          pict: "./assets/img/gallery/sorrelSoup.jpg",
          dairyFree: false,
@@ -73,7 +73,7 @@ export const Dishes: Dish[] =
       {
          id: 107,
          category: Categories.Soups,
-         name: "ukha",
+         name: "Ukha",
          ingredients: ["fish", "carrot", "potato", "onion"],
          pict: "./assets/img/gallery/ukha.jpg",
          dairyFree: true,
@@ -316,7 +316,7 @@ export const Dishes: Dish[] =
          id: 402,
          category: Categories.Salads,
          name: "Olivier Salad",
-         ingredients: ["potato", "meat", "pickled cucumber", "onion", "peas", "eggs", "mayonnaise"],
+         ingredients: ["potato", "chicken", "pickled cucumber", "onion", "peas", "eggs", "mayonnaise"],
          pict: "./assets/img/gallery/olivierSalad.jpg",
          dairyFree: true,
          calories: 162,
@@ -338,7 +338,7 @@ export const Dishes: Dish[] =
          id: 404,
          category: Categories.Salads,
          name: "Dressed Herring",
-         ingredients: ["pickled herring", "potato", "carrot", "beetroot", "carrot", "onion", "mayonnaise"],
+         ingredients: ["pickled fish", "potato", "carrot", "beetroot", "carrot", "onion", "mayonnaise"],
          pict: "./assets/img/gallery/dressedHerring.jpg",
          dairyFree: true,
          calories: 209,
