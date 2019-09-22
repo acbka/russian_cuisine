@@ -3,6 +3,7 @@ import { Dishes } from '../dishes';
 import { Dish } from '../dish';
 import { OrderService } from '../order.service';
 import { Order } from '../order';
+import { readySets } from '../readysets';
 
 @Component({
   selector: 'app-button',
@@ -13,6 +14,8 @@ export class ButtonComponent implements OnInit {
    dishes : Dish [] = Dishes;
    order : Order;
    buttonText : string = "";
+   ready = readySets;
+   
    @Input() dish;
    
 
@@ -24,6 +27,7 @@ export class ButtonComponent implements OnInit {
       } else {
          this.orderService.removeDish(this.dish);
       }
+      this.ready.forEach(s => s.selected = false);
    }
 
   constructor( private orderService: OrderService) { }

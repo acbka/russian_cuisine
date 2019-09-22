@@ -7,8 +7,10 @@
             <span><img class="pict" src="{{x.pict}}" alt=""></span>
             {{x.name}}              
       </div>
+   <div *ngIf="!set.selected">
       <button class="btn btn-warning"
-      (click)="setOrder(set.dishes)">add</button>
+      (click)="setOrder(set)">add</button>
+   </div>
    </div>
 </div>
 <!--{{isDairyFree(set)}}-->

@@ -25,8 +25,10 @@ export class ReadyComponent implements OnInit {
       return set.filter(x => x.ingredients.filter(y => y.includes(what)).length !=0).length != 0; //BeefFree - false
    }
 
-   setOrder(dishes : Dish[]) : void {
-      this.orderService .setOrder(dishes);
+   setOrder(set : ReadySet) : void {
+      this.ready.forEach(s => s.selected = false);
+      set.selected = true;
+      this.orderService .setOrder(set.dishes);
    }
 
   constructor(private orderService : OrderService) { }
