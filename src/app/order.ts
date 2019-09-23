@@ -12,8 +12,10 @@ export class Order {
     dessert: Dish[];
 
     customerName: string;
+    customerEmail: string;
     customerPhone: string;
     customerAddress: string;
+    customerSuburb: string;
     deliveryDateTime: Date;
 
     constructor() {
