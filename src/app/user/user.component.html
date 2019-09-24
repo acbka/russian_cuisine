@@ -1,6 +1,6 @@
 <div class="container">
    <div class="col-md-8 order-md-1">
-      <h4 class="mb-3">Billing address</h4>
+      <h1 class="mb-3">Contact details</h1>
       <form class="needs-validation" novalidate="" [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
          <div class="row">
             <div class="col-md-6 mb-3">
@@ -43,54 +43,60 @@
             <label for="date">Delivery date</label>
             <input type="date" class="form-control" id="date" 
             formControlName="deliveryDateTime"  
-            min="{{minDate() | date:'yyyy-MM-dd'}}">
+            min="{{minDate()}}"
+            max="{{maxDate()}}">
          </div>
 
          <h4 class="mb-3">Payment</h4>
 
          <div class="d-block my-3">
             <div class="custom-control custom-radio">
-            <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required="">
-            <label class="custom-control-label" for="debit">EFTPOS card</label>
+            <input id="cash" name="paymentMethod" type="radio" class="custom-control-input" checked required=""
+            (click)="radioClick('none')">
+            <label class="custom-control-label" for="cash">Cash</label>
             </div>
             <div class="custom-control custom-radio">
-            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required="">
-            <label class="custom-control-label" for="paypal">Cash</label>
+            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required=""
+            (click)="radioClick('block')">
+            <label class="custom-control-label" for="paypal">Paypal</label>
             </div>
          </div>
-         <div class="row">
-            <div class="col-md-6 mb-3">
-            <label for="cc-name">Name on card</label>
-            <input type="text" class="form-control" id="cc-name" placeholder="" required="">
-            <small class="text-muted">Full name as displayed on card</small>
-            <div class="invalid-feedback">
-               Name on card is required
+         <div id="paypal" [ngStyle]="{'display':checked}">
+            <div class="row">
+               <div class="col-md-6 mb-3">
+               <label for="cc-name">Name on card</label>
+               <input type="text" class="form-control" id="cc-name" placeholder="" required="">
+               <small class="text-muted">Full name as displayed on card</small>
+               <div class="invalid-feedback">
+                  Name on card is required
+               </div>
+               </div>
+               <div class="col-md-6 mb-3">
+               <label for="cc-number">Card number</label>
+               <input type="text" class="form-control" id="cc-number" placeholder="" required="">
+               <div class="invalid-feedback">
+                  Card number is required
+               </div>
+               </div>
             </div>
-            </div>
-            <div class="col-md-6 mb-3">
-            <label for="cc-number">Card number</label>
-            <input type="text" class="form-control" id="cc-number" placeholder="" required="">
-            <div class="invalid-feedback">
-               Card number is required
-            </div>
+            <div class="row">
+               <div class="col-md-3 mb-3">
+               <label for="cc-expiration">Expiration</label>
+               <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
+               <div class="invalid-feedback">
+                  Expiration date required
+               </div>
+               </div>
+               <div class="col-md-3 mb-3">
+               <label for="cc-cvv">CVV</label>
+               <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+               <div class="invalid-feedback">
+                  Security code required
+               </div>
+               </div>
             </div>
          </div>
-         <div class="row">
-            <div class="col-md-3 mb-3">
-            <label for="cc-expiration">Expiration</label>
-            <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
-            <div class="invalid-feedback">
-               Expiration date required
-            </div>
-            </div>
-            <div class="col-md-3 mb-3">
-            <label for="cc-cvv">CVV</label>
-            <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
-            <div class="invalid-feedback">
-               Security code required
-            </div>
-            </div>
-         </div>
+
          <hr class="mb-4">
          <button class="btn btn-primary btn-lg btn-block" type="submit" [disabled]="!checkoutForm.valid">Continue to checkout</button>
       </form>

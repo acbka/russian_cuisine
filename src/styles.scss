@@ -1,8 +1,17 @@
 /*You can add global styles to this file, and also import other style files */
 $red: #ED3833;
+body{
+   font-family: Arial, Helvetica, sans-serif;
+   margin-top: 112px;
+}
+h1{
+   text-align: center;
+}
 .btn-success{
    background-color: $red;
    border-color: $red;
+   border-radius: 2rem;
+   margin-bottom: 20px;
 }
 .btn-success:hover{
    background-color: darken($color: red, $amount: 20);
