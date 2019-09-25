@@ -4,6 +4,9 @@
 .navbar-brand{
    color: #ED3833;
 }
+.nav-link:focus, .nav-link:hover{
+   color: #ED3833!important;
+}
 .show{
    border: none;
 }

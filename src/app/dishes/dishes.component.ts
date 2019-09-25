@@ -40,6 +40,7 @@ export class DishesComponent implements OnInit {
       // фильтруем массив, передав  в него полученную категрию
       this.dishes = Dishes.filter(dish => dish.category == category);
     });
+    window.scrollTo(0,0);
   }
   
 

@@ -13,7 +13,9 @@
       </div>
    </div>
    <div class="bottom">
-      <button class=" btn btn-success btn-lg btn-order shadow" *ngIf="order.isComplete()">order</button>
+      <button class=" btn btn-button btn-lg btn-order shadow" 
+      (click)="goToUser()"
+      *ngIf="order.isComplete()">order</button>
    </div>   
 </div>
 

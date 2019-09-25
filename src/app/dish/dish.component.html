@@ -1,4 +1,3 @@
-
    <div [ngClass]="{'box-shadow': (properties.get(dish.category).count <= order.getCount(dish.category) && !order.inOrder(dish))}"
    class="card shadow" [ngStyle]="{'border-color': dish.selected? properties.get(dish.category).color : '#fff'}" >
       <img class="card-img-top" src="{{dish.pict}}" alt="dish">

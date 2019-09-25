@@ -2,13 +2,12 @@
    <h1>Dish sets</h1> 
    <div class="set shadow" 
    *ngFor="let set of ready">
-      <div class="icons">
-         <h4 class="header">{{set.name}}
-            <span class="beef" *ngIf="contains(set.dishes,'beef') == false"><img src="../../assets/img/beef.png"  alt="beef free" data-title="beef free"></span>
-            <span class="pork" *ngIf="(contains(set.dishes,'pork') || contains(set.dishes,'ham')) == false"><img src="../../assets/img/pork.png"  alt="beef free" data-title="pork free"></span>
-            <span class="dairy" *ngIf="isDairyFree(set.dishes) == true"><img src="../../assets/img/dairy.png"  alt="dairy free" data-title="dairy free"></span></h4>
+      <div class="header">
+         <h4>{{set.name}}</h4>
+         <img  *ngIf="(contains(set.dishes,'beef') || contains(set.dishes,'veal')) == false" class="image" src="../../assets/img/beef-icon.png"  alt="beef free" data-title="beef free">
+         <img *ngIf="(contains(set.dishes,'pork') || contains(set.dishes,'ham')) == false" class="image" src="../../assets/img/pork-icon.png"  alt="beef free" data-title="pork free">
+         <img *ngIf="isDairyFree(set.dishes) == true" class="image" src="../../assets/img/dairy-icon.png"  alt="dairy free" data-title="dairy free">
       </div>
-
       <div class="row justify-content-between">
          <div class="col-lg-2 set-dishes shadow" 
          *ngFor="let cat of numCategories"
@@ -21,10 +20,11 @@
          </div>
       </div>
       <div class="bottom" *ngIf="!set.selected">
-         <button class="btn btn-success"
+         <button class="btn btn-button"
          (click)="setOrder(set)">add to order</button>
       </div>
    </div>   
+   <app-pop-order class="pop"></app-pop-order>
 </div>
 
 

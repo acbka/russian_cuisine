@@ -5,6 +5,7 @@ import { Categories } from '../categories';
 import { Properties } from '../properties';
 import { categoriesProperties } from '../categoriesProperties';
 import { Dish } from '../dish';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-order',
@@ -30,7 +31,11 @@ export class OrderComponent implements OnInit {
    }
    properties : Map<Categories, Properties> = categoriesProperties;
 
-   constructor(private orderService : OrderService) { }
+   constructor(private orderService : OrderService, private router: Router) { }
+
+   goToUser(){
+      this.router.navigate(['/user'])
+   }
 
    getOrder(): void {
       this.orderService.getOrder()

@@ -3,6 +3,14 @@ $red: #ED3833;
 h1{
    color: $red;
 }
+a{
+   color: #000;
+   text-decoration: underline;
+}
+a:hover, a:active{
+   color: $red;
+   text-decoration: none;
+}
 .head{
    background: url(../../assets/img/header.jpg) no-repeat;
    background-size: cover;
@@ -68,5 +76,15 @@ h1{
       text-align: center;
       padding-bottom: 40px;
       color: $red;
+   }
+}
+.picture{
+   display: block;
+   width: 100%;
+}
+
+@media screen and (max-width: 500px){
+   .about-text, .order, .rest-right {
+      padding: 20px;
    }
 }

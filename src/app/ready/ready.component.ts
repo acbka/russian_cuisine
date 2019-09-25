@@ -52,7 +52,7 @@ export class ReadyComponent implements OnInit {
          this.numCategories.push(Number(x));
       }      
    }
-
+   window.scrollTo(0,0);
   }
 
   /*

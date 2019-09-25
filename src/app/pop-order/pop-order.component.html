@@ -1,1 +1,15 @@
-<p>pop-order works!</p>
+<div class="box shadow"> 
+   <div class="dish" 
+   *ngFor="let cat of numCategories"
+   [ngStyle]="{'background-color': properties.get(cat).color}">
+      <div class="set" 
+      *ngFor="let dish of getDishesInCategory(cat)">
+      <img class="picture" src="{{dish.pict}}" alt="">  
+      </div>
+   </div>
+   <div class="bottom">
+      <button class=" btn btn-button btn-sm btn-order shadow" 
+      (click)="goToOrder()"
+      *ngIf="order.isComplete()">order</button>
+   </div>   
+</div> 

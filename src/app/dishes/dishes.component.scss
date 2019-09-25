@@ -1,17 +1,17 @@
-
-.form-control{
-   border: none;
-   height: 30px;
-   padding: 0 15px;
-
+h1{
+   display: inline-block;
 }
-.image{
-   background: none;
-   border: none;
-   padding: 0;
-   outline: none;
+.header{
+   padding-top: 30px;
+   text-align: center;
+   position: relative;
 }
-input:focus{
-   border: transparent;
-   outline: none;
+.search{
+   position: absolute;
+   right: 0;
+}
+@media screen and (max-width: 900px){
+   .search{
+      position: relative;
+   }
 }
