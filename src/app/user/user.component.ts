@@ -10,17 +10,21 @@ import { Validators } from '@angular/forms';
 })
 export class UserComponent implements OnInit {
 
-  checkoutForm = new FormGroup({
-    customerName: new FormControl('', [
+   checkoutForm = new FormGroup({
+      customerName: new FormControl('', [
       Validators.required,
-      Validators.minLength(4),
-      this.forbiddenNameValidator(/bobik/i)]),
-    customerPhone: new FormControl(''),
-    customerEmail: new FormControl(''),
-    customerAddress: new FormControl(''),
-    customerSuburb: new FormControl(''),
-    deliveryDateTime: new FormControl('')
-  });
+      Validators.minLength(4)]),
+      customerPhone: new FormControl('', [
+         Validators.required,
+         Validators.pattern('[0-9]{10,10}')
+      ]),
+      customerEmail: new FormControl('',  [
+         Validators.required,
+         Validators.email]),
+      customerAddress: new FormControl('',[Validators.required]),
+      customerSuburb: new FormControl('',[Validators.required]),
+      deliveryDateTime: new FormControl('', [Validators.required])
+   });
 
   checked : string = "none";
 
@@ -82,6 +86,7 @@ onSubmit() {
 }
 
 ngOnInit() {
+   window.scrollTo(0,0);
 }
 
 }

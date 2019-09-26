@@ -5,12 +5,14 @@ import { DishesComponent } from './dishes/dishes.component';
 import { PopularComponent } from './popular/popular.component';
 import { OrderComponent } from './order/order.component';
 import { ReadyComponent } from './ready/ready.component';
+import { UserComponent } from './user/user.component';
 
 const routes: Routes = [
    { path: '', component: HomeComponent },
    { path: 'dishes/:category',   component: DishesComponent },
    { path: 'order', component: OrderComponent },
-   { path: 'ready', component: ReadyComponent}
+   { path: 'ready', component: ReadyComponent},
+   { path: 'user', component: UserComponent},
 ];
 
 @NgModule({

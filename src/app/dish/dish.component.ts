@@ -24,6 +24,7 @@ export class DishComponent implements OnInit {
   
   ngOnInit() {
    this.orderService.getOrder().subscribe(x=>this.order = x);
+   window.scrollTo(0,0);
   }
 
 }

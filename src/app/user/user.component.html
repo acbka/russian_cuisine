@@ -11,7 +11,6 @@
                </div>
             </div>
          </div>
-
          <div class="mb-3">
             <label for="email">Email</label>
             <input type="email" class="form-control" id="email" placeholder="you@example.com" formControlName="customerEmail">
@@ -35,7 +34,8 @@
 
          <div class="mb-3">
             <label for="phone">Phone</label>
-            <input type="tel" class="form-control" id="phone" placeholder="Phone" formControlName="customerPhone">
+            <input type="tel" class="form-control" id="phone" formControlName="customerPhone">
+            
          </div>
 
          <div class="mb-3">
@@ -45,9 +45,7 @@
             min="{{minDate()}}"
             max="{{maxDate()}}">
          </div>
-
          <h4 class="mb-3">Payment</h4>
-
          <div class="d-block my-3">
             <div class="custom-control custom-radio">
             <input id="cash" name="paymentMethod" type="radio" class="custom-control-input" checked required=""
@@ -95,9 +93,9 @@
                </div>
             </div>
          </div>
-
          <hr class="mb-4">
          <button class="btn btn-button shadow" type="submit" [disabled]="!checkoutForm.valid">Continue to checkout</button>
       </form>
    </div>
+   <app-pop-order class="pop"></app-pop-order>
 </div>

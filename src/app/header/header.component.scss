@@ -1,6 +1,10 @@
 .navbar{
    padding: 0 20px;
 }
+button.navbar-toggler{
+   border: none;
+   padding: 0;
+}
 .navbar-brand{
    color: #ED3833;
 }
@@ -12,4 +16,10 @@
 }
 button:focus{
    outline:none
+}
+
+@media screen and (max-width: 500px){
+   .navbar-brand{
+      font-size: 0.8rem;
+   }
 }

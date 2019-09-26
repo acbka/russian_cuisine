@@ -31,11 +31,7 @@ export class PopOrderComponent implements OnInit {
    }
    properties : Map<Categories, Properties> = categoriesProperties;
 
-   constructor(private orderService : OrderService, private router: Router) { }
-
-   goToOrder(){
-      this.router.navigate(['/order'])
-   }
+   constructor(private orderService : OrderService) { }
 
    getOrder(): void {
       this.orderService.getOrder()
