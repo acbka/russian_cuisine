@@ -23,6 +23,10 @@
          <button class="btn btn-button"
          (click)="setOrder(set)">add to order</button>
       </div>
+      <div class="bottom" *ngIf="set.selected">
+         <button class="btn btn-button"
+         (click)="delOrder(set)">remove from order</button>
+      </div>
    </div>   
    <app-pop-order class="pop"></app-pop-order>
 </div>

@@ -39,7 +39,12 @@ export class ReadyComponent implements OnInit {
    setOrder(set : ReadySet) : void {
       this.ready.forEach(s => s.selected = false);
       set.selected = true;
-      this.orderService .setOrder(set.dishes);
+      this.orderService.setOrder(set.dishes);
+   }
+   delOrder(set: ReadySet) : void{
+      this.ready.forEach(s => s.selected = false);
+      set.selected = false;
+      this.orderService.clearOrder();
    }
 
   constructor(private orderService : OrderService) { }
