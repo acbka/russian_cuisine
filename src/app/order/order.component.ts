@@ -62,6 +62,8 @@ export class OrderComponent implements OnInit {
 
    ngOnInit() {
       this.getOrder()
+      
+      window.scrollTo(0,0);
 
       for(let x in this.category){
          if(!isNaN(Number(x))){
