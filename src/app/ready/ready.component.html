@@ -13,9 +13,11 @@
          *ngFor="let cat of numCategories"
          [ngStyle]="{'border-color': properties.get(cat).color}">
             <h5>{{category[cat]}}</h5>
-            <div *ngFor="let dish of getDishOfCategory(cat,set)">
-               <span><img class="picture" src="{{dish.pict}}" alt=""></span>
-               <p class="text">{{dish.name}}</p>
+            <div class="dish-set">
+               <div class="dish" *ngFor="let dish of getDishOfCategory(cat,set)">
+                  <span><img class="picture" src="{{dish.pict}}" alt=""></span>
+                  <p class="text">{{dish.name}}</p>
+               </div>
             </div>
          </div>
       </div>

@@ -53,3 +53,25 @@ h5{
    text-align: center;
    margin: 50px 0 20px 0;
 }
+
+@media screen and (max-width: 991px){
+   .set-dishes{
+      display: flex;
+      align-items: center;
+   }
+   .dish-set{
+      display: flex;
+      flex-direction: row;
+      padding-top: 20px;
+      justify-content: center;
+   }
+   h5{
+      display: inline-block;
+   }
+   .dish{
+      max-width: 35%;
+      margin: 15px;
+      display: block;
+      text-align: center;
+   }
+}
