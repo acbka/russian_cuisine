@@ -56,6 +56,11 @@ export class PopOrderComponent implements OnInit {
 
    }
 
+   movePop() : void {
+      let obj = document.getElementsByClassName('pop')[0];
+      obj.classList.toggle("pop-show");
+   }
+
    ngOnInit() {
       this.getOrder()
 

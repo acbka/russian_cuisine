@@ -47,6 +47,10 @@ export class OrderService {
 
    clearOrder() : void {
       this.deselect();
-      this.order = new Order();
+      this.order.soup = [];
+      this.order.main = [];
+      this.order.salad = [];
+      this.order.garnish = [];
+      this.order.dessert = [];
    }
 }

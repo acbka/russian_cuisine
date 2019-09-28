@@ -1,7 +1,21 @@
 .box{
    border: solid 1px #FFF;
    border-radius: 20px;
+   display: block;
    padding: 15px 0;
+}
+.box:before{
+   content: '';
+   background: url(../../assets/img/bg.png) no-repeat;
+   background-color: #fff;
+   border: 2px solid #fff;
+   border-radius: 5px 0 0 5px;
+   padding: 5px 0 5px 5px;
+   width: 40px;
+   height: 46px;
+   position: absolute;
+   left: -40px;
+   top: 76px;
 }
 .dish{
    display: flex;
