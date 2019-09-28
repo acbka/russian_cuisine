@@ -11,6 +11,9 @@ button.navbar-toggler{
 .nav-link:focus, .nav-link:hover{
    color: #ED3833!important;
 }
+ul.menu li:hover, ul.menu li:active, ul.menu li:focus{
+   color: #ED3833!important;
+}
 .show{
    border: none;
 }
