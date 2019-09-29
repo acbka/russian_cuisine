@@ -26,6 +26,17 @@ h5{
 .set{
    padding-bottom: 20px;
 }
+.set:focus, .set:hover{
+   outline: none;
+   text-decoration: none;
+}
+.text{
+   text-decoration: none;
+   color: #000;
+}
+.text:focus{
+   outline: none;
+}
 .btn-order{
    text-align: center;
    margin: 50px;

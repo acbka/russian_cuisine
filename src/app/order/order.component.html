@@ -6,11 +6,11 @@
       [ngStyle]="{'border-color': properties.get(cat).color}">
          <h5 [ngStyle]="{'border-bottom-color': properties.get(cat).color}">{{category[cat]}}</h5>
          <div class="dish-set">
-            <div class="set" 
+            <a class="set"  routerLink="/dishes/{{cat}}" 
             *ngFor="let dish of getDishesInCategory(cat)">
-               <span><img class="picture" src="{{dish.pict}}" alt=""></span>
+               <img class="picture" src="{{dish.pict}}" alt="dish">
                <p class="text">{{dish.name}}</p>
-            </div>
+            </a>
          </div>
       </div>
    </div>

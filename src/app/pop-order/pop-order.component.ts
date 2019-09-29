@@ -63,7 +63,6 @@ export class PopOrderComponent implements OnInit {
 
    ngOnInit() {
       this.getOrder()
-
       for(let x in this.category){
          if(!isNaN(Number(x))){
             this.numCategories.push(Number(x));
