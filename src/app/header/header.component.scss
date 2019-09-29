@@ -21,6 +21,25 @@ button:focus{
    outline:none
 }
 
+/*
+button.navbar-toggler[_ngcontent-lvv-c47] {
+   border: none;
+   padding: 0;
+}
+.navbar-toggler {
+   font-size: 1.25rem;
+   line-height: 1;
+   background-color: transparent;
+   border: 1px solid transparent;
+}
+.navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+}
+*/
+
+
 @media screen and (max-width: 500px){
    .navbar-brand{
       font-size: 0.8rem;
