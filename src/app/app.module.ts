@@ -17,6 +17,7 @@ import { SearchComponent } from './search/search.component';
 import { ReadyComponent } from './ready/ready.component';
 import { UserComponent } from './user/user.component';
 import { FinalComponent } from './final/final.component';
+import { PaypalComponent } from './paypal/paypal.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { FinalComponent } from './final/final.component';
     ReadyComponent,
     UserComponent,
     FinalComponent,
+    PaypalComponent,
   ],
   imports: [
     BrowserModule,

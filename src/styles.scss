@@ -36,7 +36,7 @@ h1{
    position: fixed;
    top: 120px;
    right: -150px;
-   z-index: 2;
+   z-index: 999!important;
    cursor: pointer;
 }
 .pop-show{

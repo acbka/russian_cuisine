@@ -10,5 +10,25 @@
 </head>
 <body>
   <app-root></app-root>
+  
+  <script
+    src="https://www.paypal.com/sdk/js?client-id=AawAYRBUUrorBuXIW5llkmxB-IGhbNxtLGEoZPTNd1vqAkl9QCYvNOei9kLh40AhJIw5t6X6xJLBx1Ac&currency=NZD">
+  </script>
+
+  
+
+  <script>
+    paypal.Buttons({
+      style: {
+         layout:  'vertical',
+         color:   'white',
+         shape:   'rect',
+         label:   'paypal',
+         width:    '50px'
+      }
+   }).render('#paypal-button-container');
+  </script>
+
+  
 </body>
 </html>

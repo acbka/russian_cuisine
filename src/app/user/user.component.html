@@ -34,8 +34,7 @@
 
          <div class="mb-3">
             <label for="phone">Phone</label>
-            <input type="tel" class="form-control" id="phone" formControlName="customerPhone">
-            
+            <input type="tel" class="form-control" id="phone" formControlName="customerPhone">            
          </div>
 
          <div class="mb-3">
@@ -59,22 +58,14 @@
             </div>
          </div>
          <div id="paypal" [ngStyle]="{'display':checked}">
-            <p>Now, I will be redirected on PayPal website for payment</p>
+            <p>Now, you will be redirected on PayPal website for payment</p>
+            <div id="paypal-button-container"></div>
+            <div #paypal></div>
          </div>
          <hr class="mb-4">
          <button class="btn btn-button shadow" type="submit" [disabled]="!checkoutForm.valid">Continue to checkout</button>
-         <button class="btn btn-button shadow" type="submit" [disabled]="!checkoutForm.valid">PayPal</button>
+         <button class="btn btn-button shadow" type="submit" (click)="goToPaypal()">PayPal</button>
       </form>
    </div>
    <app-pop-order class="pop"></app-pop-order>
 </div>
-
-<script
-   src="https://www.paypal.com/sdk/js?client-id=AawAYRBUUrorBuXIW5llkmxB-IGhbNxtLGEoZPTNd1vqAkl9QCYvNOei9kLh40AhJIw5t6X6xJLBx1Ac&currency=NZD">
-</script>
-
-<div id="paypal-button-container"></div>
-
-<script>
-   paypal.Buttons().render('#paypal-button-container');
-</script>

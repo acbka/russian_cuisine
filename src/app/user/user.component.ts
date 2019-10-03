@@ -4,6 +4,7 @@ import { FormBuilder, FormControl, FormGroup, ValidatorFn, AbstractControl } fro
 import { Validators } from '@angular/forms';
 //import { HttpClient } from '@angular/common/http';
 import { Order } from '../order';
+import { Router } from '@angular/router';
 //import { HttpHeaders } from '@angular/common/http';
 
 
@@ -76,11 +77,13 @@ export class UserComponent implements OnInit {
    }
 
    constructor(
-      private orderServce: OrderService) {
+      private orderServce: OrderService, private router: Router) {
 
       this.orderServce.getOrder().subscribe(ord => this.order = ord);
    }
-
+   goToPaypal(){
+      this.router.navigate(['/paypal'])
+   }
    async onSubmit() {
       if (this.checkoutForm.status === "VALID" && this.order.isComplete()) {
          this.order.customerName = this.checkoutForm.controls["customerName"].value;
@@ -117,26 +120,9 @@ export class UserComponent implements OnInit {
       }
    }
 
+
    ngOnInit() {
       window.scrollTo(0, 0);
    }
-
-}
-
-// (new Intl.DateTimeFormat('en-US', options).format(result)).replace('/', '-').replace('/', '-').replace('/', '-');
-/*
- *             console.log(JSON.stringify(this.order));
-
-            //const response = await fetch('http://localhost/foodshop/default.aspx', {
-            //    method: 'post', // *get, post, put, delete, etc.
-            //    mode: 'no-cors', // cors, no-cors, *cors, same-origin
-            //    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-            //    //credentials: 'same-origin', // include, *same-origin, omit
-            //    headers: {
-            //        'content-type': 'application/json'
-            //        // 'content-type': 'application/x-www-form-urlencoded',
-            //    },
-            //    redirect: 'follow', // manual, *follow, error
-            //    referrer: 'no-referrer', // no-referrer, *client
-            //    body: JSON.stringify(this.order) // body data type must match "content-type" header
-            //});*/
+     
+} 

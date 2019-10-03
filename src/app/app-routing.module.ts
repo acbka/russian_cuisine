@@ -7,6 +7,7 @@ import { OrderComponent } from './order/order.component';
 import { ReadyComponent } from './ready/ready.component';
 import { UserComponent } from './user/user.component';
 import { FinalComponent } from './final/final.component';
+import { PaypalComponent } from './paypal/paypal.component';
 
 const routes: Routes = [
    { path: '', component: HomeComponent },
@@ -14,7 +15,8 @@ const routes: Routes = [
    { path: 'order', component: OrderComponent },
    { path: 'ready', component: ReadyComponent},
    { path: 'user', component: UserComponent},
-   { path: 'final', component: FinalComponent}
+   { path: 'final', component: FinalComponent},
+   { path: 'paypal', component: PaypalComponent}
 ];
 
 @NgModule({
