@@ -6,6 +6,7 @@ import { PopularComponent } from './popular/popular.component';
 import { OrderComponent } from './order/order.component';
 import { ReadyComponent } from './ready/ready.component';
 import { UserComponent } from './user/user.component';
+import { FinalComponent } from './final/final.component';
 
 const routes: Routes = [
    { path: '', component: HomeComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
    { path: 'order', component: OrderComponent },
    { path: 'ready', component: ReadyComponent},
    { path: 'user', component: UserComponent},
+   { path: 'final', component: FinalComponent}
 ];
 
 @NgModule({

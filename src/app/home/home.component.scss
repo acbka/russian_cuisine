@@ -28,6 +28,7 @@ a:hover, a:active{
    color: #fff;
    display: inline-block;
    padding: 20px 50px 10px;
+   margin-top: 18px;
    p{
       margin-bottom: 7px;
    }
@@ -82,7 +83,14 @@ a:hover, a:active{
    display: block;
    width: 100%;
 }
-
+@media screen and (max-width: 990px){
+   .header-text{
+      margin-top: 0;
+   }
+   .subtitle{
+      margin-bottom: 60px;
+   }
+}
 @media screen and (max-width: 500px){
    .about-text, .order, .rest-right {
       padding: 20px;

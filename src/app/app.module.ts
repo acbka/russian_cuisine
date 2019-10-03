@@ -16,6 +16,7 @@ import { SearchPipe } from './search.pipe';
 import { SearchComponent } from './search/search.component';
 import { ReadyComponent } from './ready/ready.component';
 import { UserComponent } from './user/user.component';
+import { FinalComponent } from './final/final.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { UserComponent } from './user/user.component';
     SearchComponent,
     ReadyComponent,
     UserComponent,
+    FinalComponent,
   ],
   imports: [
     BrowserModule,
