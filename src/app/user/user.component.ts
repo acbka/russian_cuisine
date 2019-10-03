@@ -5,7 +5,6 @@ import { Validators } from '@angular/forms';
 //import { HttpClient } from '@angular/common/http';
 import { Order } from '../order';
 import { Router } from '@angular/router';
-//import { HttpHeaders } from '@angular/common/http';
 
 
 @Component({
@@ -33,7 +32,8 @@ export class UserComponent implements OnInit {
       deliveryDateTime: new FormControl('', [Validators.required])
     });
 
-    checked: string = "none";
+    checked1: string = "none";
+    checked2: string = "block";
 
    forbiddenNameValidator(nameRe: RegExp): ValidatorFn {
       return (control: AbstractControl): { [key: string]: any } | null => {
@@ -72,18 +72,21 @@ export class UserComponent implements OnInit {
       return this.dateFormat(result);
    }
 
-   radioClick(show: string): void {
-      this.checked = show;
+   radioClick(show1: string, show2: string): void {
+      this.checked1 = show1;
+      this.checked2 = show2;
    }
+
+
 
    constructor(
       private orderServce: OrderService, private router: Router) {
 
       this.orderServce.getOrder().subscribe(ord => this.order = ord);
    }
-   goToPaypal(){
-      this.router.navigate(['/paypal'])
-   }
+
+
+
    async onSubmit() {
       if (this.checkoutForm.status === "VALID" && this.order.isComplete()) {
          this.order.customerName = this.checkoutForm.controls["customerName"].value;
@@ -112,11 +115,10 @@ export class UserComponent implements OnInit {
          }
 
 
-         //console.log(`http://www.sakhiepi.ru/src/mailer.aspx?${orderStringRequest(this.order)}`);
-      fetch(`http://www.sakhiepi.ru/src/mailer.aspx?${orderStringRequest(this.order)}`);
-               //.then((response) => {
-               //    console.log(response);
-               //});
+         fetch(`http://www.sakhiepi.ru/src/mailer.aspx?${orderStringRequest(this.order)}`);
+         this.router.navigate(['/final'])
+            //.then((response) => {
+             //this.router.navigate(['/final'])});
       }
    }
 

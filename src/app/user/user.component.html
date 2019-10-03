@@ -48,24 +48,28 @@
          <div class="d-block my-3">
             <div class="custom-control custom-radio">
             <input id="cash" name="paymentMethod" type="radio" class="custom-control-input" checked required=""
-            (click)="radioClick('none')">
+            (click)="radioClick('none', 'block')" [disabled]="!checkoutForm.valid">
             <label class="custom-control-label" for="cash">Cash</label>
             </div>
             <div class="custom-control custom-radio">
             <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required=""
-            (click)="radioClick('block')">
+            (click)="radioClick('block', 'none')" [disabled]="!checkoutForm.valid">
             <label class="custom-control-label" for="paypal">PayPal</label>
             </div>
          </div>
-         <div id="paypal" [ngStyle]="{'display':checked}">
-            <p>Now, you will be redirected on PayPal website for payment</p>
-            <div id="paypal-button-container"></div>
+         <div id="paypal" [ngStyle]="{'display':checked1}">
+            <p>You will be redirected on PayPal website for payment</p>
+            <app-paypal></app-paypal>
             <div #paypal></div>
          </div>
          <hr class="mb-4">
-         <button class="btn btn-button shadow" type="submit" [disabled]="!checkoutForm.valid">Continue to checkout</button>
-         <button class="btn btn-button shadow" type="submit" (click)="goToPaypal()">PayPal</button>
+         <button class="btn btn-button shadow" type="submit" 
+         [disabled]="!checkoutForm.valid"
+         [ngStyle]="{'display':checked2}"
+         (click)="onSubmit()"
+         >Continue to checkout</button>
       </form>
    </div>
    <app-pop-order class="pop"></app-pop-order>
+   
 </div>
