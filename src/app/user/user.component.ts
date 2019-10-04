@@ -5,6 +5,7 @@ import { Validators } from '@angular/forms';
 //import { HttpClient } from '@angular/common/http';
 import { Order } from '../order';
 import { Router } from '@angular/router';
+import { sendMail } from '../mailer';
 
 
 @Component({
@@ -77,50 +78,18 @@ export class UserComponent implements OnInit {
       this.checked2 = show2;
    }
 
-
-
    constructor(
       private orderServce: OrderService, private router: Router) {
 
       this.orderServce.getOrder().subscribe(ord => this.order = ord);
    }
 
-
-
-   async onSubmit() {
+   onSubmit() {
       if (this.checkoutForm.status === "VALID" && this.order.isComplete()) {
-         this.order.customerName = this.checkoutForm.controls["customerName"].value;
-         this.order.customerAddress = this.checkoutForm.controls["customerAddress"].value;
-         this.order.customerEmail = this.checkoutForm.controls["customerEmail"].value;
-         this.order.customerPhone = this.checkoutForm.controls["customerPhone"].value;
-         this.order.customerSuburb = this.checkoutForm.controls["customerSuburb"].value;
-         this.order.deliveryDateTime = this.checkoutForm.controls["deliveryDateTime"].value;
-         this.order.id = Math.round(Math.random() * 10000000);
-
-         function orderStringRequest(ord: Order): string {
-            let result: string = "";
-            let soup = `so=${ord.soup[0].name}, ${ord.soup[1].name}`;
-            let sides = `ga=${ord.garnish[0].name}, ${ord.garnish[1].name}`;
-            let mains = `ma=${ord.main[0].name}, ${ord.main[1].name}`;
-            let dessert = `de=${ord.dessert[0].name}`;
-            let salads = `sa=${ord.salad[0].name}`;
-            let name = `nm=${ord.customerName}`;
-            let address = `ad=${ord.customerAddress}`;
-            let id = `id=${ord.id}`;
-            let phone = `ph=${ord.customerPhone}`;
-            let date = `dt=${ord.deliveryDateTime}`;
-            let email = `em=${ord.customerEmail}`;
-            result = `${id}&${soup}&${sides}&${mains}&${dessert}&${salads}&${phone}&${date}&${name}&${address}&${email}`;
-            return result;
-         }
-
-
-         fetch(`http://www.sakhiepi.ru/src/mailer.aspx?${orderStringRequest(this.order)}`);
-         this.router.navigate(['/final'])
-            //.then((response) => {
-             //this.router.navigate(['/final'])});
+          sendMail(this.order, this.checkoutForm);
+          this.router.navigate(['/final']);
       }
-   }
+  }
 
 
    ngOnInit() {

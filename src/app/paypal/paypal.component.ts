@@ -1,4 +1,9 @@
-import { Component, OnInit, AfterViewChecked } from '@angular/core';
+import { Component, OnInit, AfterViewChecked, Input } from '@angular/core';
+import { Router } from '@angular/router';
+import { OrderService } from '../order.service';
+import { FormGroup } from '@angular/forms';
+import { Order } from '../order';
+import { sendMail } from '../mailer';
 
 declare let paypal: any;
 @Component({
@@ -12,6 +17,11 @@ export class PaypalComponent implements OnInit, AfterViewChecked {
    paypalLoad: boolean = true;
    
    finalAmount: number = 1;
+
+   order: Order;
+   
+   @Input() checkoutForm: FormGroup;
+    
  
    paypalConfig = {
      env: 'sandbox',
@@ -39,6 +49,11 @@ export class PaypalComponent implements OnInit, AfterViewChecked {
      onAuthorize: (data, actions) => {
        return actions.payment.execute().then((payment) => {
          //Do something when payment is successful.
+         if (this.checkoutForm.status === "VALID" && this.order.isComplete()) {
+            sendMail(this.order, this.checkoutForm);
+            this.order.isPaid = true;
+            this.router.navigate(['/final']);
+        }
        })
      }
    };
@@ -63,9 +78,11 @@ export class PaypalComponent implements OnInit, AfterViewChecked {
    }
  
 
-  constructor() { }
+   constructor(private router: Router, private orderService: OrderService) {
+   }
 
   ngOnInit() {
+   this.orderService.getOrder().subscribe(ord => this.order = ord);
   }
 
 }

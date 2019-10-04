@@ -10,6 +10,8 @@ export class Order {
     garnish: Dish[];
     salad: Dish[];
     dessert: Dish[];
+    isPaid: boolean;
+    price: number;
 
     customerName: string;
     customerEmail: string;
@@ -26,6 +28,8 @@ export class Order {
       this.garnish = [];
       this.salad = [];
       this.dessert = [];
+      this.isPaid = false;
+      this.price = 79.99;
   
       this.customerName = "";
       this.customerPhone = "";

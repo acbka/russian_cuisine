@@ -1,7 +1,8 @@
-<div class="container">
-   <div class="col-md-8 order-md-1">
+<div class="container" *ngIf="order.isComplete() else wrong">
+   <div class="col-md-8 order-md-1" >
       <h1 class="mb-3">Contact details</h1>
-      <form class="needs-validation" novalidate="" [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+      <form class="needs-validation" novalidate="" [formGroup]="checkoutForm" 
+      (ngSubmit)="onSubmit()">
          <div class="row">
             <div class="col-md-6 mb-3">
                <label for="name">Full name</label>
@@ -59,7 +60,7 @@
          </div>
          <div id="paypal" [ngStyle]="{'display':checked1}">
             <p>You will be redirected on PayPal website for payment</p>
-            <app-paypal></app-paypal>
+            <app-paypal [checkoutForm]="checkoutForm"></app-paypal>
             <div #paypal></div>
          </div>
          <hr class="mb-4">
@@ -70,6 +71,14 @@
          >Continue to checkout</button>
       </form>
    </div>
+   
    <app-pop-order class="pop"></app-pop-order>
    
 </div>
+<ng-template #wrong>
+   <div class="wrong">
+      <h1>Warning!</h1>
+      <p>This page is unavailable.</p>
+      <p>Please start your order from <a routerLink="/">Home page</a></p>
+   </div>
+</ng-template>
