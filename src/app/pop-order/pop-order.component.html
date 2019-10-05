@@ -7,4 +7,5 @@
       <a routerLink="/dishes/{{cat}}"><img class="picture" src="{{dish.pict}}" alt=""> </a>
       </div>
    </div> 
+   <a class="next" routerLink="/user" *ngIf="order.isComplete()">Continue</a>
 </div> 

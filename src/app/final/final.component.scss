@@ -14,9 +14,13 @@ ul{
    padding-bottom: 20px;
    list-style-type: none;
 }
+li{
+   text-align: left;
+}
 .main{
    padding-bottom: 30px;
-   margin: 0 350px;
+   text-align: center;
+   margin: 0 auto;
 }
 .wrong{
    background: #F5F5F5;

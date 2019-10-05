@@ -1,11 +1,13 @@
 .box{
-  // background: #ED3833;
+   background: #ED3833;
    border: solid 1px #ED3833;
    overflow: hidden;
    border-radius: 20px;
+   text-align: center;
 }
 .box:before{
-   content: 'order';
+   content: 'cart';
+   background: url(../../assets/img/basket-white.png) no-repeat top;
    color: #fff;
    font-size: 1.2rem;
    font-weight: 500;
@@ -15,7 +17,7 @@
    border: 2px solid #ED3833;
    border-right: none;
    border-radius: 15px 0 0 15px;
-   padding: 5px;
+   padding: 25px 5px 5px 5px;
    position: absolute;
    left: -45px;
    top: 80px;
@@ -36,4 +38,12 @@
 .btn-sm{
    padding: 0 7px!important;
    margin-bottom: 0;
+}
+.next{
+   color: #fff;
+   text-decoration: underline;
+}
+.next:hover{
+   text-decoration: none;
+   color: #fff;
 }

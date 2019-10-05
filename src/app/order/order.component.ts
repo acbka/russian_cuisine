@@ -57,7 +57,6 @@ export class OrderComponent implements OnInit {
             case 1: return [this.order.getCategoryArray(category)[0]];
          }
       }
-
    }
 
    ngOnInit() {

@@ -1,10 +1,9 @@
 <div class="container-fluid">
-   <div class="main" *ngIf="order.isComplete else wrong">
+   <div class="col-lg-8 col-md-10 text-center my-col main" *ngIf="order.isComplete() else wrong">
       <h1>Thank you {{customerName}}</h1>
-      <ul>
-         <li>You order #{{id}} is confirmed<span *ngIf="isPaid"> and paid</span>.</li>
-         <li>Your Rusiian granny is cooking meal for you.</li>
-      </ul>
+      <h5>You order #{{id}} is confirmed<span *ngIf="isPaid"> and paid</span>.</h5>
+      <h5>Your Rusiian granny is cooking meal for you.</h5>     
+      <br>    
       <h3>Here are your order details: </h3>
       <ul>
          <li>Order reference id: {{id}}.</li>

@@ -76,3 +76,14 @@ h5{
       text-align: center;
    }
 }
+@media screen and (max-width: 767px){
+   .dish-set{
+      padding-top: 10px;
+   }
+   .dish{
+      margin: 0 15px;
+   }
+   .text{
+      margin-bottom: 8px;
+   }
+}

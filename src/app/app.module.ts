@@ -18,6 +18,7 @@ import { ReadyComponent } from './ready/ready.component';
 import { UserComponent } from './user/user.component';
 import { FinalComponent } from './final/final.component';
 import { PaypalComponent } from './paypal/paypal.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { PaypalComponent } from './paypal/paypal.component';
     UserComponent,
     FinalComponent,
     PaypalComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
