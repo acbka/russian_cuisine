@@ -1,12 +1,8 @@
-<ul class="ml-md-auto menu">
-   <li *ngFor="let item of dishes">
-      <a class="menu-item" routerLink="dishes/item">{{cat}}</a>
+<ul class="menu">
+   <li *ngFor="let item of numCategories">
+      <a class="menu-item shadow" routerLink="../{{item}}"
+      [ngStyle]="{'background-color': properties.get(item).color}"
+      [ngClass]="{'active': numCat==item}"
+      >{{category[item]}}</a>
    </li>
-   <!--
-   <a class="dropdown-item item" routerLink="dishes/0">Soups</a>
-   <a class="dropdown-item item" routerLink="dishes/1">Main</a>
-   <a class="dropdown-item item" routerLink="dishes/2">Sides</a>
-   <a class="dropdown-item item" routerLink="dishes/3">Salads</a>
-   <a class="dropdown-item item" routerLink="dishes/4">Desserts</a>
-   -->
 </ul>

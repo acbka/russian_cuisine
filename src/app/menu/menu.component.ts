@@ -14,8 +14,11 @@ import { ActivatedRoute } from '@angular/router';
 export class MenuComponent implements OnInit {
 
    dishes : Dish [] = Dishes;
+   category = Categories;
+   numCategories : number [] = [];
    properties : Map<Categories, Properties> = categoriesProperties;
    cat: string;
+   numCat : number;
 
 constructor(private route: ActivatedRoute,) { }
 
@@ -25,11 +28,17 @@ ngOnInit() {
    this.route.params.subscribe(params => {
       // у нас в параметрах только один - назвается он category
       // + перед выражением преобразует string в number
-      const category = +params.category;
+      this.numCat = +params.category;
       this.cat = Categories[params.category];
       // фильтруем массив, передав  в него полученную категрию
-      this.dishes = Dishes.filter(dish => dish.category == category);
+      this.dishes = Dishes.filter(dish => dish.category == this.numCat);
    });
+
+   for(let x in this.category){
+      if(!isNaN(Number(x))){
+         this.numCategories.push(Number(x));
+      }      
+   }
 }
 
 }
