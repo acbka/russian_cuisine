@@ -3,6 +3,7 @@ import { Order } from './order';
 import { Observable, of } from 'rxjs';
 import { Dish } from './dish';
 import { Categories } from './categories';
+import { readySets } from './readysets';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +12,8 @@ export class OrderService {
 
    order : Order = new Order();
    category = Categories;
+   ready = readySets;
+   
    constructor() { }
 
    getOrder(): Observable<Order> {
@@ -52,5 +55,9 @@ export class OrderService {
       this.order.salad = [];
       this.order.garnish = [];
       this.order.dessert = [];
+   }
+
+   cleanSets(): void {
+      this.ready.forEach(s => s.selected = false);
    }
 }

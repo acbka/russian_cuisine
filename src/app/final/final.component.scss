@@ -24,7 +24,7 @@ li{
 }
 .wrong{
    background: #F5F5F5;
-   height: 50vh;
+   height: calc(100vh - 230px);
    text-align: center;
    h1{
       color: #ED3833;

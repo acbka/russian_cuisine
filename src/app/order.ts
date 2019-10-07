@@ -136,4 +136,15 @@ export class Order {
       return result;
    }
 
+   isNotEmpty() : boolean{
+      let result: boolean = false;
+      for (let cat in Categories) {
+         if (!isNaN(Number(cat))) {
+            result = result || 
+            (this.getCategoryArray(+cat).length != 0);
+         }
+      }
+      return result;
+   }
+
 }

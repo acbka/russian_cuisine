@@ -60,7 +60,8 @@ export class OrderComponent implements OnInit {
    }
 
    ngOnInit() {
-      this.getOrder()
+      this.getOrder();
+      
       
       window.scrollTo(0,0);
 

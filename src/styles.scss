@@ -21,6 +21,9 @@ h1{
    border-color: darken($color: red, $amount: 20);
    color: #fff;
 }
+.btn-button:focus, .btn-button:active {
+   box-shadow: none;
+}
 .btn{
    color: #fff;
 }

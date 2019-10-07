@@ -58,6 +58,6 @@ export class FinalComponent implements OnInit {
    this.copyOrder();
    window.scrollTo(0,0);
    this.orderService.clearOrder();
+   this.orderService.cleanSets();
   }
-
 }
