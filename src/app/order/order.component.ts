@@ -31,7 +31,7 @@ export class OrderComponent implements OnInit {
    }
    properties : Map<Categories, Properties> = categoriesProperties;
 
-   constructor(private orderService : OrderService, private router: Router) { }
+   constructor(public orderService : OrderService, private router: Router) { }
 
    goToUser(){
       this.router.navigate(['/user'])

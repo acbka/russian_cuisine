@@ -1,5 +1,7 @@
 <div class="container">
    <h1>Your cart<span *ngIf="!order.isNotEmpty()"> is empty</span></h1>
+   <p class="add"
+   *ngIf="orderService.orderCountdown() != '0'">You should add {{orderService.orderCountdown()}} more {{orderService.orderCountdown() == '1'? 'dish': 'dishes'}} to complete the order</p>
    <div class="row justify-content-between">
       <div class="col-lg-2 dish shadow" 
       *ngFor="let cat of numCategories"

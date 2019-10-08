@@ -10,6 +10,13 @@ h5{
    border-bottom-width: 2px;
    margin: 25px 0!important;
 }
+.container{
+   min-height: calc(100vh - 230px);
+}
+.add{
+   text-align: center;
+   font-size: 1.2rem;   
+}
 .picture{
    width: 100%;
 }

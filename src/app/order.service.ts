@@ -4,6 +4,8 @@ import { Observable, of } from 'rxjs';
 import { Dish } from './dish';
 import { Categories } from './categories';
 import { readySets } from './readysets';
+import { Properties } from './properties';
+import { categoriesProperties } from './categoriesProperties';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +14,8 @@ export class OrderService {
 
    order : Order = new Order();
    category = Categories;
-   ready = readySets;
+    ready = readySets;
+    categoriesProps: Map<Categories, Properties> = categoriesProperties;
    
    constructor() { }
 
@@ -43,7 +46,7 @@ export class OrderService {
    deselect(){
       for(let x in this.category){
          if(!isNaN(Number(x))){
-            this.order.getCategoryArray(+x).forEach(dish => dish.selected = false)
+             this.order.getCategoryArray(+x).forEach(dish => dish.selected = false);
          }      
       }
    }
@@ -59,5 +62,19 @@ export class OrderService {
 
    cleanSets(): void {
       this.ready.forEach(s => s.selected = false);
-   }
+    }
+
+    orderCountdown(): string {
+        // how many dishes left to complete the order
+        let max = 0;
+        let inOrder = 0;
+        for (let x in this.category) { 
+            if (!isNaN(Number(x))) {
+                max += this.categoriesProps.get(+x).count;
+                inOrder += this.order.getCategoryArray(+x).length;
+            }
+        }
+
+        return `${max - inOrder}`;
+    }
 }
