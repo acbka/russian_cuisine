@@ -12,6 +12,8 @@ export function sendMail(order: Order, checkoutForm: FormGroup) {
     order.deliveryDateTime = checkoutForm.controls["deliveryDateTime"].value;
     order.id = Math.round(Math.random() * 10000000);
 
+    let dt = new Date(checkoutForm.controls["deliveryDateTime"].value).toLocaleDateString();
+
     let result: string = "";
     let soup = `so=${order.soup[0].name}, ${order.soup[1].name}`;
     let sides = `ga=${order.garnish[0].name}, ${order.garnish[1].name}`;
@@ -22,7 +24,7 @@ export function sendMail(order: Order, checkoutForm: FormGroup) {
     let address = `ad=${order.customerAddress}`;
     let id = `id=${order.id}`;
     let phone = `ph=${order.customerPhone}`;
-    let date = `dt=${order.deliveryDateTime}`;
+    let date = `dt=${dt}`;
     let email = `em=${order.customerEmail}`;
     result = `${id}&${soup}&${sides}&${mains}&${dessert}&${salads}&${phone}&${date}&${name}&${address}&${email}`;
 

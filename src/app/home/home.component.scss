@@ -88,7 +88,8 @@ a:hover, a:active{
       margin-top: 0;
    }
    .subtitle{
-      margin-bottom: 60px;
+      margin: 10px;
+      width: 100%;
    }
 }
 @media screen and (max-width: 500px){
@@ -97,10 +98,6 @@ a:hover, a:active{
    }
    .rest{
       padding: 20px;
-   }
-   .subtitle{
-      margin: 10px;
-      width: 100%;
    }
    .dlg_mess{
       text-align: center;
