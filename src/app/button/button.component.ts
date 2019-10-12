@@ -18,7 +18,6 @@ export class ButtonComponent implements OnInit {
    
    @Input() dish;
    
-
    onClick(){
       this.dish.selected = !this.dish.selected;
       this.buttonText = !this.dish.selected ? 'Add to order' : 'Remove';

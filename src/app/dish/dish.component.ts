@@ -1,6 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Dish } from '../dish';
-import { Dishes } from '../dishes';
 import { categoriesProperties } from '../categoriesProperties';
 import { Categories } from '../categories';
 import { OrderService } from '../order.service';
@@ -20,7 +18,6 @@ export class DishComponent implements OnInit {
    @Input() ingredients: string = "block"; 
 
   constructor( private orderService: OrderService) { }
-
   
   ngOnInit() {
    this.orderService.getOrder().subscribe(x=>this.order = x);

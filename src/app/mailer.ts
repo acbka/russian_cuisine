@@ -21,12 +21,13 @@ export function sendMail(order: Order, checkoutForm: FormGroup) {
     let dessert = `de=${order.dessert[0].name}`;
     let salads = `sa=${order.salad[0].name}`;
     let name = `nm=${order.customerName}`;
-    let address = `ad=${order.customerAddress}`;
-    let id = `id=${order.id}`;
-    let phone = `ph=${order.customerPhone}`;
+    let address = `ad=${order.customerAddress}, ${order.customerSuburb}`;
+    let rid = `rid=${order.id}`;
+    let phone = `ph=${order.customerPhone}`; 
     let date = `dt=${dt}`;
     let email = `em=${order.customerEmail}`;
-    result = `${id}&${soup}&${sides}&${mains}&${dessert}&${salads}&${phone}&${date}&${name}&${address}&${email}`;
+    result = `${rid}&${soup}&${sides}&${mains}&${dessert}&${salads}&${phone}&${date}&${name}&${address}&${email}`;
 
-    fetch(`http://www.sakhiepi.ru/src/mailer.aspx?${result}`);
+    fetch(`https://us-central1-babushka-22c31.cloudfunctions.net/sendMail?${result}`)
+    //fetch(`http://www.sakhiepi.ru/src/mailer.aspx?${result}`);
 }

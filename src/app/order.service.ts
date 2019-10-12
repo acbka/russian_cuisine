@@ -62,19 +62,18 @@ export class OrderService {
 
    cleanSets(): void {
       this.ready.forEach(s => s.selected = false);
-    }
+   }
 
-    orderCountdown(): string {
-        // how many dishes left to complete the order
-        let max = 0;
-        let inOrder = 0;
-        for (let x in this.category) { 
-            if (!isNaN(Number(x))) {
-                max += this.categoriesProps.get(+x).count;
-                inOrder += this.order.getCategoryArray(+x).length;
-            }
-        }
-
-        return `${max - inOrder}`;
-    }
+   orderCountdown(): string {
+      // how many dishes left to complete the order
+      let max = 0;
+      let inOrder = 0;
+      for (let x in this.category) { 
+         if (!isNaN(Number(x))) {
+            max += this.categoriesProps.get(+x).count;
+            inOrder += this.order.getCategoryArray(+x).length;
+         }
+      }
+      return `${max - inOrder}`;
+   }
 }

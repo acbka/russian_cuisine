@@ -15,24 +15,24 @@ import { sendMail } from '../mailer';
 })
 export class UserComponent implements OnInit {
 
-    order: Order;
-    dates: Date[] = [];
+   order: Order;
+   dates: Date[] = [];
 
-    checkoutForm = new FormGroup({
-        customerName: new FormControl('', [
-            Validators.required,
-            Validators.minLength(4)]),
-        customerPhone: new FormControl('', [
-            Validators.required,
-            Validators.pattern('[0-9]{10,10}')
-        ]),
-        customerEmail: new FormControl('', [
-            Validators.required,
-            Validators.email]),
-        customerAddress: new FormControl('', [Validators.required]),
-        customerSuburb: new FormControl('', [Validators.required]),
-        deliveryDateTime: new FormControl('', [Validators.required])
-    });
+   checkoutForm = new FormGroup({
+      customerName: new FormControl('', [
+         Validators.required,
+         Validators.minLength(4)]),
+      customerPhone: new FormControl('', [
+         Validators.required,
+         Validators.pattern('[0-9]{10,10}')
+      ]),
+      customerEmail: new FormControl('', [
+         Validators.required,
+         Validators.email]),
+      customerAddress: new FormControl('', [Validators.required]),
+      customerSuburb: new FormControl('', [Validators.required]),
+      deliveryDateTime: new FormControl('', [Validators.required])
+   });
 
     checked1: string = "none";
     checked2: string = "block";
@@ -67,7 +67,6 @@ export class UserComponent implements OnInit {
 
         return this.dateFormat(result);
     }
-
 
     minimumDate(): Date {
         var result = (new Date());

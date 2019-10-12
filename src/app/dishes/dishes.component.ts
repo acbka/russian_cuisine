@@ -43,5 +43,4 @@ export class DishesComponent implements OnInit {
     window.scrollTo(0,0);
   }
   
-
 }
