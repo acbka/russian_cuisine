@@ -19,6 +19,7 @@ import { UserComponent } from './user/user.component';
 import { FinalComponent } from './final/final.component';
 import { PaypalComponent } from './paypal/paypal.component';
 import { MenuComponent } from './menu/menu.component';
+import { InputMaskAngularModule } from 'input-mask-angular';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { MenuComponent } from './menu/menu.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    InputMaskAngularModule
   ],
   providers: [],
   bootstrap: [AppComponent]

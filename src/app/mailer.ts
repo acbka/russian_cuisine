@@ -28,6 +28,6 @@ export function sendMail(order: Order, checkoutForm: FormGroup) {
     let email = `em=${order.customerEmail}`;
     result = `${rid}&${soup}&${sides}&${mains}&${dessert}&${salads}&${phone}&${date}&${name}&${address}&${email}`;
 
-    fetch(`https://us-central1-babushka-22c31.cloudfunctions.net/sendMail?${result}`)
+    fetch(`https://us-central1-granny-10517.cloudfunctions.net/sendMail?${result}`)
     //fetch(`http://www.sakhiepi.ru/src/mailer.aspx?${result}`);
 }

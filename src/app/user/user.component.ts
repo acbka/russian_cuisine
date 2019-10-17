@@ -6,7 +6,7 @@ import { Validators } from '@angular/forms';
 import { Order } from '../order';
 import { Router } from '@angular/router';
 import { sendMail } from '../mailer';
-
+import { InputMaskAngularModule } from 'input-mask-angular';
 
 @Component({
     selector: 'app-user',
@@ -23,8 +23,9 @@ export class UserComponent implements OnInit {
          Validators.required,
          Validators.minLength(4)]),
       customerPhone: new FormControl('', [
-         Validators.required,
-         Validators.pattern('[0-9]{10,10}')
+         Validators.required
+         //,
+        // Validators.pattern('[0-9]{9,10}')
       ]),
       customerEmail: new FormControl('', [
          Validators.required,
