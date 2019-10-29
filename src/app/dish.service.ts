@@ -16,7 +16,7 @@ export class DishService {
    // notificantion about event when data fetching completed
    private dishChangeEvent = new Subject<void>();
    public dishesReceived$ = this.dishChangeEvent.asObservable();
-
+/*
    firebaseConfig = {
       apiKey: "AIzaSyBZwnxTJ2n_HSlQYlWmlo97DXhu2Hthw_w",
       authDomain: "granny-10517.firebaseapp.com",
@@ -27,7 +27,7 @@ export class DishService {
       appId: "1:922121321767:web:5d9de62dd361db0fd1bd02",
       measurementId: "G-56PKJTL67R"
    };
-
+*/
    dishesDb: any = null;
    dishes: Dish[] = [];
    readySets: ReadySet[] = [];
