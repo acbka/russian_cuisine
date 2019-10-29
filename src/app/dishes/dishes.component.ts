@@ -1,46 +1,51 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Dishes } from '../dishes';
+import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 import { Dish } from '../dish';
 import { categoriesProperties } from '../categoriesProperties'
 import { Categories } from '../categories';
 import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
 import { Properties } from '../properties';
+import { Subscription } from 'rxjs';
+import { DishService } from '../dish.service';
 
 @Component({
   selector: 'app-dishes',
   templateUrl: './dishes.component.html',
   styleUrls: ['./dishes.component.scss']
 })
-export class DishesComponent implements OnInit {
+export class DishesComponent implements OnInit, OnDestroy {
 
-   dishes : Dish [] = Dishes;
-   properties : Map<Categories, Properties> = categoriesProperties;
+   private dishesReceivedRef: Subscription = null;
+
+   @Input() dishes: Dish[] = [];
+   properties: Map<Categories, Properties> = categoriesProperties;
    cat: string;
    searchText: string = '';
    showIngredients: string = "block";
 
    constructor(
       private route: ActivatedRoute,
-      private location: Location
-   ) { }
+      private dishService: DishService) {
+   }
 
    searchDish($event) {
       this.searchText = $event;
    }
 
-  ngOnInit() {
-    // подписаться на уведомления при изменении параметров в адресной строке
-    // params - это новый массив параметров (идущих после /dishes/)
-    this.route.params.subscribe(params => {
-      // у нас в параметрах только один - назвается он category
-      // + перед выражением преобразует string в number
-      const category = +params.category;
-      this.cat = Categories[params.category];
-      // фильтруем массив, передав  в него полученную категрию
-      this.dishes = Dishes.filter(dish => dish.category == category);
-    });
-    window.scrollTo(0,0);
-  }
-  
+   ngOnInit() {
+      this.route.params.subscribe(async params => {
+
+         const category = +params.category;
+         this.cat = Categories[params.category];
+
+         this.dishService.getDishes().subscribe(val => this.dishes = val);
+         this.dishesReceivedRef = this.dishService.dishesReceived$.subscribe(() => this.dishes = this.dishService.getDishByCategory(category));
+
+         this.dishes = this.dishService.getDishByCategory(category);
+      });
+      window.scrollTo(0, 0);
+   }
+
+   ngOnDestroy(): void {
+      this.dishesReceivedRef.unsubscribe();
+   }
 }

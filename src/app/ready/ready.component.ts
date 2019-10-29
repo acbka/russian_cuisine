@@ -1,14 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Dish } from '../dish';
-import { Dishes } from '../dishes';
 import { ReadySet } from '../readyset';
 import { OrderService } from '../order.service';
 import { Order } from '../order';
-import { readySets } from '../readysets';
-import { ActivatedRoute } from '@angular/router';
 import { Categories } from '../categories';
 import { Properties } from '../properties';
 import { categoriesProperties } from '../categoriesProperties';
+import { Subscription } from 'rxjs';
+import { DishService } from '../dish.service';
 
 @Component({
   selector: 'app-ready',
@@ -16,61 +15,57 @@ import { categoriesProperties } from '../categoriesProperties';
   styleUrls: ['./ready.component.scss']
 })
 
-export class ReadyComponent implements OnInit {
+export class ReadyComponent implements OnInit, OnDestroy {
 
-   order : Order;
-   ready = readySets;
+   private dishesReceivedRef: Subscription = null;
+
+   order: Order;
+   ready = [];
    category = Categories;
-   numCategories : number [] = [];
-   properties : Map<Categories, Properties> = categoriesProperties;
+   numCategories: number[] = [];
+   properties: Map<Categories, Properties> = categoriesProperties;
 
    getDishOfCategory(cat: Categories, set: ReadySet): Dish[] {
       return set.dishes.filter(z => z.category === cat);
-    }
+   }
 
-   isDairyFree(set:Dish[]) : boolean {
+   isDairyFree(set: Dish[]): boolean {
       return set.every(x => x.dairyFree);
    }
 
-   contains(set:Dish[], what) : boolean {
-      return set.filter(x => x.ingredients.filter(y => y.includes(what)).length !=0).length != 0; //BeefFree - false
+   contains(set: Dish[], what): boolean {
+      return set.filter(x => x.ingredients.filter(y => y.includes(what)).length != 0).length != 0; //BeefFree - false
    }
 
-   setOrder(set : ReadySet) : void {
+   setOrder(set: ReadySet): void {
       this.ready.forEach(s => s.selected = false);
       set.selected = true;
       this.orderService.setOrder(set.dishes);
    }
-   delOrder(set: ReadySet) : void{
+
+   delOrder(set: ReadySet): void {
       this.ready.forEach(s => s.selected = false);
       set.selected = false;
       this.orderService.clearOrder();
    }
 
-  constructor(private orderService : OrderService) { }
+   constructor(private orderService: OrderService,
+      private dishService: DishService) { }
 
-  ngOnInit() {
-   this.orderService.getOrder().subscribe(x=>this.order = x);
+   ngOnInit() {
+      this.dishService.getReadySets().subscribe(x => this.ready = x);
+      this.orderService.getOrder().subscribe(x => this.order = x);
+      this.dishesReceivedRef = this.dishService.dishesReceived$.subscribe(() => this.ready = this.dishService.buildSets());
 
-   for(let x in this.category){
-      if(!isNaN(Number(x))){
-         this.numCategories.push(Number(x));
-      }      
-   }
-   window.scrollTo(0,0);
-  }
-
-  /*
-   iBeef(set:Dish[]) : boolean {
-      return this.contains(set, "beef");
+      for (let x in this.category) {
+         if (!isNaN(Number(x))) {
+            this.numCategories.push(Number(x));
+         }
+      }
+      window.scrollTo(0, 0);
    }
 
-   isPork(set:Dish[]) : boolean {
-      return this.contains(set, "pork");   
+   ngOnDestroy(): void {
+      this.dishesReceivedRef.unsubscribe();
    }
-
-   isFish(set:Dish[]) : boolean {
-      return this.contains(set, "fish");
-   }
-*/
 }

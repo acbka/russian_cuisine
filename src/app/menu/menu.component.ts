@@ -5,6 +5,7 @@ import { categoriesProperties } from '../categoriesProperties';
 import { Categories } from '../categories';
 import { Properties } from '../properties';
 import { ActivatedRoute } from '@angular/router';
+import { DishService } from '../dish.service';
 
 @Component({
   selector: 'app-menu',
@@ -20,25 +21,26 @@ export class MenuComponent implements OnInit {
    cat: string;
    numCat : number;
 
-constructor(private route: ActivatedRoute,) { }
+   constructor(private route: ActivatedRoute,private dishService: DishService) { }
 
-ngOnInit() {
+   ngOnInit() {
+      this.dishService.getDishes().subscribe(x => this.dishes = x);
          // подписаться на уведомления при изменении параметров в адресной строке
-   // params - это новый массив параметров (идущих после /dishes/)
-   this.route.params.subscribe(params => {
-      // у нас в параметрах только один - назвается он category
-      // + перед выражением преобразует string в number
-      this.numCat = +params.category;
-      this.cat = Categories[params.category];
-      // фильтруем массив, передав  в него полученную категрию
-      this.dishes = Dishes.filter(dish => dish.category == this.numCat);
-   });
+      // params - это новый массив параметров (идущих после /dishes/)
+      this.route.params.subscribe(params => {
+         // у нас в параметрах только один - назвается он category
+         // + перед выражением преобразует string в number
+         this.numCat = +params.category;
+         this.cat = Categories[params.category];
+         // фильтруем массив, передав  в него полученную категрию
+         this.dishes = this.dishService.getDishByCategory(this.numCat);
+      });
 
-   for(let x in this.category){
-      if(!isNaN(Number(x))){
-         this.numCategories.push(Number(x));
-      }      
+      for(let x in this.category){
+         if(!isNaN(Number(x))){
+            this.numCategories.push(Number(x));
+         }      
+      }
    }
-}
 
 }
