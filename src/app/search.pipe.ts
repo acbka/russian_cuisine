@@ -11,5 +11,5 @@ export class SearchPipe implements PipeTransform {
          value.length == 0 ||
          dish.ingredients.filter(x => x.includes(value)).length > 0
          || dish.name.toLocaleLowerCase().includes(value.toLocaleLowerCase()));
-    }
-  }
+   }
+}

@@ -3,7 +3,6 @@ import { Order } from './order';
 import { Observable, of } from 'rxjs';
 import { Dish } from './dish';
 import { Categories } from './categories';
-import { readySets } from './readysets';
 import { Properties } from './properties';
 import { categoriesProperties } from './categoriesProperties';
 import { DishService } from './dish.service';

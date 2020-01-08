@@ -17,10 +17,6 @@ button.navbar-toggler{
 .dropdown-item:active{
    background: #fff;
 }
-/*
-ul.menu li:hover, ul.menu li:active, ul.menu li:focus{
-   color: #ED3833!important;
-}
 */
 .show{
    border: none;
@@ -35,24 +31,6 @@ button:focus{
 .basket:hover, .basket:focus{
    background: url(../../assets/img/basket-hover.png) no-repeat left;
 }
-
-/*
-button.navbar-toggler[_ngcontent-lvv-c47] {
-   border: none;
-   padding: 0;
-}
-.navbar-toggler {
-   font-size: 1.25rem;
-   line-height: 1;
-   background-color: transparent;
-   border: 1px solid transparent;
-}
-.navbar-collapse {
-    flex-basis: 100%;
-    flex-grow: 1;
-    align-items: center;
-}
-*/
 
 
 @media screen and (max-width: 500px){

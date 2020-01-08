@@ -5,7 +5,6 @@ import { Dish } from '../dish';
 import { Properties } from '../properties';
 import { categoriesProperties } from '../categoriesProperties';
 import { OrderService } from '../order.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pop-order',
@@ -57,7 +56,7 @@ export class PopOrderComponent implements OnInit {
 
    movePop() : void {
       let obj = document.getElementsByClassName('pop')[0];
-      obj.classList.toggle("pop-show");
+      obj.classList.toggle('pop-show');
    }
 
    ngOnInit() {
