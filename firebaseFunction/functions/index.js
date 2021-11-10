@@ -7,7 +7,7 @@ var smtpTransport = require('nodemailer-smtp-transport');
 
 admin.initializeApp();
 
-let transporter = nodemailer.createTransport(smtpTransport({
+const transporter = nodemailer.createTransport(smtpTransport({
     service:'gmail',
     host: 'smtp.gmail.com',
     auth: {
@@ -22,20 +22,20 @@ let transporter = nodemailer.createTransport(smtpTransport({
 
 exports.sendMail = functions.https.onRequest((request, response) => {
     cors(request, response, () => {
-        
-        let soup = request.query.so;
-        let sides = request.query.ga;
-        let mains = request.query.ma;
-        let dessert = request.query.de;
-        let salads = request.query.sa;
-        let name = request.query.nm;
-        let address = request.query.ad;
-        let id = request.query.rid;
-        let phone = request.query.ph;
-        let date = request.query.dt;
-        let email = `${request.query.em}, acbka@ua.fm`;
 
-        let textMsg = `Dear ${name}!\n\n\n` +
+        const soup = request.query.so;
+        const sides = request.query.ga;
+        const mains = request.query.ma;
+        const dessert = request.query.de;
+        const salads = request.query.sa;
+        const name = request.query.nm;
+        const address = request.query.ad;
+        const id = request.query.rid;
+        const phone = request.query.ph;
+        const date = request.query.dt;
+        const email = `${request.query.em}, acbka@ua.fm`;
+
+        const textMsg = `Dear ${name}!\n\n\n` +
         `Your order is confirmed. We will cook your meals for the next week on exactly ${date}.\n` +
         `All the dishes will be delivered to you fresh and delicious!\n\n\n\n` +
         `Here are your order details\n\n` +
@@ -60,8 +60,8 @@ exports.sendMail = functions.https.onRequest((request, response) => {
 
         return transporter.sendMail(mailOptions, (error, info) => {
             if (error) {
-                //console.log(error.tolet());
-                return response.send(error.tolet());
+                //console.log(error.toconst());
+                return response.send(error.toconst());
             }
             //console.log('sent');
             return response.send('Sent');
