@@ -42,6 +42,7 @@ h1{
    right: -150px;
    z-index: 999!important;
    cursor: pointer;
+   transition: right 0.3s;
 }
 .pop-show{
    right: 0;

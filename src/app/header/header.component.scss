@@ -1,40 +1,43 @@
-.navbar{
-   padding: 0 20px;
+.navbar {
+  padding: 0 20px;
 }
-button.navbar-toggler{
-   border: none;
-   padding: 0;
+button.navbar-toggler {
+  border: none;
+  padding: 0;
 }
-.nav-item{
-   display: block;
+.nav-item {
+  display: block;
 }
-.navbar-brand{
-   color: #ED3833;
+.navbar-brand {
+  color: #ed3833;
 }
-.nav-link:focus, .nav-link:hover, .dropdown-item:hover, .dropdown-item:focus{
-   color: #ED3833!important;
+.nav-link:focus,
+.nav-link:hover,
+.dropdown-item:hover,
+.dropdown-item:focus {
+  color: #ed3833 !important;
 }
-.dropdown-item:active{
-   background: #fff;
-}
-*/
-.show{
-   border: none;
-}
-button:focus{
-   outline:none
-}
-.basket{
-   background: url(../../assets/img/basket.png) no-repeat left;
-   padding-left: 28px!important;
-}
-.basket:hover, .basket:focus{
-   background: url(../../assets/img/basket-hover.png) no-repeat left;
+.dropdown-item:active {
+  background: #fff;
 }
 
+.show {
+  border: none;
+}
+button:focus {
+  outline: none;
+}
+.basket {
+  background: url(../../assets/img/basket.png) no-repeat left;
+  padding-left: 28px !important;
+}
+.basket:hover,
+.basket:focus {
+  background: url(../../assets/img/basket-hover.png) no-repeat left;
+}
 
-@media screen and (max-width: 500px){
-   .navbar-brand{
-      font-size: 0.8rem;
-   }
+@media screen and (max-width: 500px) {
+  .navbar-brand {
+    font-size: 0.8rem;
+  }
 }

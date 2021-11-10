@@ -23,11 +23,13 @@ export function sendMail(order: Order, checkoutForm: FormGroup) {
     let name = `nm=${order.customerName}`;
     let address = `ad=${order.customerAddress}, ${order.customerSuburb}`;
     let rid = `rid=${order.id}`;
-    let phone = `ph=${order.customerPhone}`; 
+    let phone = `ph=${order.customerPhone}`;
     let date = `dt=${dt}`;
     let email = `em=${order.customerEmail}`;
     result = `${rid}&${soup}&${sides}&${mains}&${dessert}&${salads}&${phone}&${date}&${name}&${address}&${email}`;
 
-    fetch(`https://us-central1-granny-10517.cloudfunctions.net/sendMail?${result}`)
+  fetch(`https://us-central1-granny-10517.cloudfunctions.net/sendMail?${result}`, {
+    mode: 'no-cors',
+    })
     //fetch(`http://www.sakhiepi.ru/src/mailer.aspx?${result}`);
 }

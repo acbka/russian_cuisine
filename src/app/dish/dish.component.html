@@ -6,8 +6,8 @@ class="card shadow" [ngStyle]="{'border-color': dish.selected? properties.get(di
       <h5 class="card-title">{{dish.name | uppercase}}</h5>
       <div [ngStyle]="{'display':ingredients}">
          <p class="card-text">Ingredients:</p>
-         <p class="ingridient" *ngFor="let x of dish.ingredients">{{x}}</p> 
-      </div> 
+         <p class="ingridient" *ngFor="let x of dish.ingredients">{{x}}</p>
+      </div>
    </div>
    <div class="card-footer">
       <app-button [dish]="dish"></app-button>
